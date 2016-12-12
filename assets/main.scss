@@ -45,7 +45,7 @@ body {
 pre, code {
     border: none;
     border-radius: 0;
-    background-color: lighten($brand-color, 42%);
+    background-color: lighten($grey-color, 72%);
 }
 
 main {
@@ -62,35 +62,53 @@ main {
 
 .site-header {
   border: none;
-  background: lighten($brand-color, 42%);
+  background: lighten($brand-color, 38%);
+  color: $background-color;
+
+  a {
+    color: $background-color;
+    text-decoration: underline;
+
+    &:hover {
+      color: $grey-color;
+    }
+  }
+
+  .page-link {
+    text-decoration: none;
+    color: $background-color;
+  } 
 
   .wrapper {
     background: $brand-color;
   }
-}
 
-.site-header {
-  color: $background-color;
+  .description {
+    font-size: 15px;
+  }
+
+  .trigger {
+    font-size: 18px;
+  }
 }
 
 .site-title {
   display: block;
   text-indent: -9999px;
-  width: 204px;
-  height: 70px;
+  width: 175px;
+  height: 60px;
   background: url(/assets/rightright_logo.svg) no-repeat 0 15px;
-  background-size: 204px 70px;
+  background-size: 175px 60px;
   padding: 15px 0;
 
   &:hover {
     background: url(/assets/rightright_logo_hover.svg) no-repeat 0 15px;
-    background-size: 204px 70px;
   }
 }
 
 .site-footer {
   border: none;
-  background: lighten($grey-color, 42%);
+  background: lighten($grey-color, 72%);
   color: $background-color;
   padding: 0;
 
@@ -123,4 +141,13 @@ main {
 .footer-copyright {
   font-size: 12px;
   margin-bottom: 0;
+}
+
+.post-title {
+  margin-bottom: 0;
+  padding: 10px 0;
+}
+
+.post-description {
+  font-size: 14px;
 }
