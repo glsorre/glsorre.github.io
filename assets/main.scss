@@ -38,8 +38,19 @@ $on-laptop:        800px;
 // // Import partials from the `minima` theme.
 @import "minima";
 
+html {
+  height: 100%;
+}
+
 body {
-  font-family: Helvetica Neue,Helvetica,sans-serif; 
+  font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-wrapper {
+  flex: 1;
 }
 
 pre, code {
@@ -130,12 +141,21 @@ main {
 }
 
 .description-paragraph {
-  margin-bottom: 0
+  margin-bottom: 5px;
 }
 
 .author-paragraph {
   font-family: 'Scope One', serif;
   font-style: italic;
+
+  a {
+    display: inline-block;
+    margin: 0 15px 0 0;
+  }
+
+  .fa-linkedin:before {
+    margin-left: 5px;
+  }
 }
 
 .footer-copyright {
