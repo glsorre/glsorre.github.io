@@ -17,7 +17,7 @@ title: right | right
 email: your-email@domain.com
 author: Giuseppe Sorrentino
 description: > # this means to ignore newlines until "baseurl:"
-  about making the <b>right digital products in the right way</b> through
+  about crafting the <b>right digital product</b> through
   <b>ux</b> and <b>agile</b>
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
