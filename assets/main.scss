@@ -12,13 +12,12 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
+$text-color:       #322933;
+$background-color: lighten($text-color, 80%);
 $brand-color:      #69b161;
 
-$grey-color:       #322933;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
+// $green:#69b161;
+$grey-color: $text-color;
 
 // Width of the content area
 $content-width:    800px;
@@ -47,20 +46,38 @@ body {
   min-height: 100%;
   display: flex;
   flex-direction: column;
+  background: $background-color;
 }
 
 .content-wrapper {
   flex: 1;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  color: $brand-color;
+}
+
+a {
+  color: $brand-color;
+  text-decoration: none;
+  
+  &:hover {
+    color: $brand-color;
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: $brand-color;
+  }
+}
+
 pre, code {
     border: none;
     border-radius: 0;
-    background-color: lighten($grey-color, 72%);
+    background-color: white;
 }
 
 main {
-  background: $background-color;
 
   .wrapper {
     background: $background-color;
@@ -73,33 +90,41 @@ main {
 
 .site-header {
   border: none;
-  background: lighten($brand-color, 38%);
-  color: $background-color;
+  // background: lighten($brand-color, 38%);
+  // color: $background-color;
 
   a {
-    color: $background-color;
+    color: $text-color;
     text-decoration: underline;
 
     &:hover {
-      color: $grey-color;
+      color: $brand-color;
     }
   }
 
   .page-link {
     text-decoration: none;
-    color: $background-color;
+    color: $text-color;
   } 
 
-  .wrapper {
-    background: $brand-color;
+  .bordered {
+    border-bottom: 1px solid $text-color;
   }
 
   .description {
     font-size: 15px;
+    // border-bottom: 1px solid $text-color;
+    margin: 0;
+    padding: 15px 0;
+
+    b {
+      color: $brand-color;
+    }
   }
 
   .trigger {
     font-size: 18px;
+    margin-top: 15px;
   }
 }
 
@@ -108,23 +133,24 @@ main {
   text-indent: -9999px;
   width: 175px;
   height: 60px;
-  background: url(/assets/rightright_logo.svg) no-repeat 0 15px;
-  background-size: 175px 60px;
-  padding: 15px 0;
+  background: url("/assets/rightright_logo.svg") no-repeat 0px 0px;
+  background-size: 175px 120px;
+  margin: 15px 0 0 0;
 
   &:hover {
-    background: url(/assets/rightright_logo_hover.svg) no-repeat 0 15px;
+    background: url("/assets/rightright_logo.svg") no-repeat 0px -65px;
+    background-size: 175px 120px;
   }
 }
 
 .site-footer {
   border: none;
-  background: lighten($grey-color, 72%);
+  // background: lighten($grey-color, 72%);
   color: $background-color;
   padding: 0;
 
   .wrapper {
-    background: $grey-color;
+    background: $text-color;
     padding: 30px;
   }
 }
@@ -140,9 +166,9 @@ main {
   }
 }
 
-.description-paragraph {
-  margin-bottom: 5px;
-}
+// .description-paragraph {
+//   margin-bottom: 5px;
+// }
 
 .author-paragraph {
   font-family: 'Scope One', serif;
