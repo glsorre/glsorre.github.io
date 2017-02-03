@@ -131,15 +131,15 @@ main {
 .site-title {
   display: block;
   text-indent: -9999px;
-  width: 175px;
+  width: 160px;
   height: 60px;
-  background: url("/assets/rightright_logo.svg") no-repeat 0px 0px;
-  background-size: 175px 120px;
+  background: url("/assets/rightright_logo.svg") no-repeat -5px 0px;
+  background-size: 170px 120px;
   margin: 15px 0 0 0;
 
   &:hover {
-    background: url("/assets/rightright_logo.svg") no-repeat 0px -65px;
-    background-size: 175px 120px;
+    background: url("/assets/rightright_logo.svg") no-repeat -5px -65px;
+    background-size: 170px 120px;
   }
 }
 
