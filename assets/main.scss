@@ -90,8 +90,6 @@ main {
 
 .site-header {
   border: none;
-  // background: lighten($brand-color, 38%);
-  // color: $background-color;
 
   a {
     color: $text-color;
@@ -113,7 +111,6 @@ main {
 
   .description {
     font-size: 15px;
-    // border-bottom: 1px solid $text-color;
     margin: 0;
     padding: 15px 0;
 
@@ -181,31 +178,6 @@ main {
   }
 }
 
-// .author-link {
-//   @extend .page-link;
-//   &:visited {
-//     color: black;
-//   }
-// }
-
-// .description-paragraph {
-//   margin-bottom: 5px;
-// }
-
-// .author-paragraph {
-//   font-family: 'Scope One', serif;
-//   font-style: italic;
-
-//   a {
-//     display: inline-block;
-//     margin: 0 15px 0 0;
-//   }
-
-//   .fa-linkedin:before {
-//     margin-left: 5px;
-//   }
-// }
-
 .post-title {
   margin-bottom: 0;
   padding: 10px 0;
@@ -213,4 +185,30 @@ main {
 
 .post-description {
   font-size: 14px;
+}
+
+@media screen and (max-width: 800px) {
+
+}
+
+@media screen and (max-width: 600px) {
+  .site-footer {
+
+    .footer-copyright {
+      text-align: center;
+    }
+
+    .footer-nav{
+      padding: 0;
+
+      a {
+        width: 24%;
+        padding: 20px 0;
+        display: inline-block;
+        text-align: center;
+        font-size: 24px;
+      }
+    }
+  }
+
 }
