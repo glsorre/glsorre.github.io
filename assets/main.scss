@@ -100,6 +100,10 @@ main {
     }
   }
 
+  .close_menu {
+    border-top: $text-color 1px solid;
+  }
+
   .page-link {
     text-decoration: none;
     color: $text-color;
@@ -185,10 +189,6 @@ main {
 
 .post-description {
   font-size: 14px;
-}
-
-.close_menu {
-    border-top: $text-color 1px solid;
 }
 
 .hide_on_palm {
