@@ -145,49 +145,66 @@ main {
 
 .site-footer {
   border: none;
-  // background: lighten($grey-color, 72%);
   color: $background-color;
   padding: 0;
 
   .wrapper {
     background: $text-color;
-    padding: 30px;
+    padding-top: 15px;
+  }
+
+  .footer-col {
+    color: $background-color;
+    // margin-bottom: 0;
+  }
+
+  .footer-copyright {
+    margin: 0;
+    font-size: 13px;
+  }
+
+  .footer-nav{
+    float: right;
+
+    a {
+      padding: 15px;
+    }
+  }
+
+  a {
+    color: $background-color;
+    text-decoration: underline;
+
+    &:hover {
+      color: $brand-color;
+    }
   }
 }
 
-.site-footer .footer-col {
-  color: $background-color;
-}
-
-.author-link {
-  @extend .page-link;
-  &:visited {
-    color: black;
-  }
-}
+// .author-link {
+//   @extend .page-link;
+//   &:visited {
+//     color: black;
+//   }
+// }
 
 // .description-paragraph {
 //   margin-bottom: 5px;
 // }
 
-.author-paragraph {
-  font-family: 'Scope One', serif;
-  font-style: italic;
+// .author-paragraph {
+//   font-family: 'Scope One', serif;
+//   font-style: italic;
 
-  a {
-    display: inline-block;
-    margin: 0 15px 0 0;
-  }
+//   a {
+//     display: inline-block;
+//     margin: 0 15px 0 0;
+//   }
 
-  .fa-linkedin:before {
-    margin-left: 5px;
-  }
-}
-
-.footer-copyright {
-  font-size: 12px;
-  margin-bottom: 0;
-}
+//   .fa-linkedin:before {
+//     margin-left: 5px;
+//   }
+// }
 
 .post-title {
   margin-bottom: 0;
