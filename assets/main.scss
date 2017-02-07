@@ -187,11 +187,30 @@ main {
   font-size: 14px;
 }
 
-@media screen and (max-width: 800px) {
+.close_menu {
+    border-top: $text-color 1px solid;
+}
 
+.hide_on_palm {
+  display: inline;
+}
+
+.hide_on_desk {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
 }
 
 @media screen and (max-width: 600px) {
+  .hide_on_desk {
+    display: inline;
+  }
+
+  .hide_on_palm {
+    display: hidden;
+  }
+
   .site-footer {
 
     .footer-copyright {
