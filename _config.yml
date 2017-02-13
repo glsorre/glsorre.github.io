@@ -14,13 +14,13 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: right | right
-email: your-email@domain.com
+email: giuseppe@rightright.me
 author: Giuseppe Sorrentino
 description: > # this means to ignore newlines until "baseurl:"
   about crafting the <b>right digital product</b> through
   <b>ux</b> and <b>agile/lean</b> methods
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://rightright.me" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: glsorre
 github_username: glsorre
 

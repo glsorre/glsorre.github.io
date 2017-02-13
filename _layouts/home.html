@@ -4,10 +4,6 @@ layout: default
 
 <div class="home">
 
-  <!--<h1 class="page-heading">Blog</h1>-->
-  
-  {{ content }}
-
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
@@ -16,11 +12,18 @@ layout: default
           <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
         </h2>
 
+        {% if post.type == 'medium' %}
+          <span class="post-type"><i class="fa fa-medium"></i> Post |</span>
+        {% elsif post.type == 'slideshare' %}
+          <span class="post-type"><i class="fa fa-slideshare"></i> Slides deck |</span>
+        {% elsif post.type == 'project' %}
+          <span class="post-type"><i class="fa fa-external-link-square"></i> Project |</span>
+        {% endif %}
+        
         <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <p class="post-description">{{ post.description | escape }}</p>
+        <!--<p class="post-description">{{ post.description | escape }}</p>-->
       </li>
     {% endfor %}
   </ul>
-
+  
 </div>

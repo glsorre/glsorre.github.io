@@ -109,9 +109,9 @@ main {
     color: $text-color;
   } 
 
-  .bordered {
-    border-bottom: 1px solid $text-color;
-  }
+  // .bordered {
+  //   border-bottom: 1px solid $text-color;
+  // }
 
   .description {
     font-size: 17px;
@@ -151,7 +151,7 @@ main {
 
 .site-footer {
   border: none;
-  color: $background-color;
+  background: $text-color;
   padding: 0;
 
   .wrapper {
@@ -194,6 +194,12 @@ main {
 }
 
 .post-description {
+  font-size: 14px;
+}
+
+.post-type {
+  display: inline-block;
+  padding: 0 1px;
   font-size: 14px;
 }
 
