@@ -854,11 +854,17 @@ body {
 @media only screen and (max-width: 600px) {
 	.nav .nav-link {
 		padding: 0 15px;
-		background: $brand-color;
+		background: $text-color;
 		height: 40px;
 		line-height: 40px;
-		color: $text-color;
+		color: $background-color;
 		border-radius: 3px;
+    &:hover {
+      color: $background-color;
+    }
+    &:visited {
+      color: $background-color;
+    }
 		i {
 			padding: 0 0 0 7px;
 		}
