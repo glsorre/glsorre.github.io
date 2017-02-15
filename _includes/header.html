@@ -10,8 +10,13 @@
 
    <div class="unit golden-big">
       <nav class="nav">
-        <a class="nav-link" href="#aboutme">contact me</a>
-        <a class="nav-link" href="{{ "/feed.xml" | relative_url }}">feed<i class="fa fa-rss"></i></a>
+        {% for page in site.pages %}
+          {% if page.title %}
+          <a class="page-link" href="{{ page.url | relative_url }}">{{ my_page.title | escape }}</a>
+          {% endif %}
+        {% endfor %}
+        <a class="nav-link" href="#contacts">contacts<i class="fa fa-user"></i></a>
+        <a class="nav-link" href="/feed.xml">feed<i class="fa fa-rss"></i></a>
       </nav>
    </div>
 

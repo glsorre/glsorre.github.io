@@ -1,0 +1,24 @@
+---
+layout: 
+title: "rightright.me feed"
+---
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title type="text" xml:lang="en">{{ site.title }}</title>
+  <link type="application/atom+xml" href="http://rightright.me/feed.xml" rel="self"/>
+  <link type="text/html" href="http://rightright.me" rel="alternate"/>
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>http://rightright.me/all_feed</id>
+  <author>
+    <name>Giuseppe Sorrentino</name>
+  </author>
+  <rights>Copyright (c) 2017, Giuseppe Sorrentino; all rights reserved.</rights>
+
+  {% for link in site.links limit:20 %}
+  <entry>
+    <title>{{ link.title }}</title>
+    <link href="home_url{{ link.anchor }}"/>
+    <updated>{{ link.date | date_to_xmlschema }}</updated>
+  </entry>
+  {% endfor %}
+</feed>
