@@ -7,10 +7,12 @@ layout: default
 
       {% for link in site.links %}
       <div class="post-container">
-        
+
           <h2 class="post-title">
-            <a class="post-link" href="{{ link.url }}" target="_blank">{{ link.title | escape }}</a>
+            <a class="post-link" href="{{ link.anchor }}" target="_blank">{{ link.title | escape }}</a>
           </h2>
+
+          <span class="post-description"> {{ link.desc }} | </span>
 
           {% if link.type == 'medium' %}
             <span class="post-type"><i class="fa fa-medium"></i> Post |</span>
@@ -21,6 +23,8 @@ layout: default
           {% endif %}
           
           <span class="post-meta">{{ link.date | date: "%b %-d, %Y" }}</span>
+
+          
 
       </div>
       {% endfor %}
