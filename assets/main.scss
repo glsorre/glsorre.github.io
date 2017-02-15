@@ -422,9 +422,9 @@ table {
   border-spacing: 0;
 }
 body {
-  background: #ffffff;
+  background: $background-color;
   font: 14px/20px "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #444444;
+  color: $text-color;
 }
 h1,
 h2,
@@ -495,7 +495,7 @@ small {
 blockquote {
   padding: 0 0 0 15px;
   margin: 20px 0;
-  border-left: 5.0000000000000995px solid #2b2b2b;
+  border-left: 5.0000000000000995px solid $text-color;
   font-size: 17.5px;
   font-weight: 300;
   line-height: 1.25;
@@ -507,7 +507,6 @@ blockquote p {
 blockquote cite {
   display: block;
   line-height: 20px;
-  color: #2b2b2b;
   font-style: normal;
   font-size: 12.6px;
 }
@@ -517,17 +516,17 @@ blockquote cite:before {
 hr {
   margin: 20px 0;
   border: 0;
-  border-top: 1px solid #2b2b2b;
+  border-top: 1px solid $text-color;
 }
 a,
 a:visited {
-  color: #5e5e5e;
+  color: $text-color;
   text-decoration: underline;
   outline: 0;
 }
 a:hover,
 a:focus {
-  color: #2b2b2b;
+  color: $text-color;
 }
 ul,
 ol {
@@ -565,7 +564,7 @@ input[type="button"] {
   -moz-box-shadow: inset 0px 1px 2px #f1f1f1;
   box-shadow: inset 0px 1px 2px #f1f1f1;
   border: 1px solid #777777;
-  color: #444444;
+  color: $text-color;
   cursor: pointer;
   display: inline-block;
   text-decoration: none;
@@ -890,7 +889,7 @@ h1, h2, h3, h4, h5, h6 {
   color: $brand-color;
 	font-family: "Scope One", sans;
 	a {
-		text-decoration: none;
+		text-decoration: underline;
 	}
 }
 

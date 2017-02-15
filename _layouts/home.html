@@ -5,22 +5,22 @@ layout: default
 <div class="home grid">
   <div class="unit whole">
 
-      {% for post in site.posts %}
+      {% for link in site.links %}
       <div class="post-container">
         
           <h2 class="post-title">
-            <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            <a class="post-link" href="{{ link.url }}" target="_blank">{{ link.title | escape }}</a>
           </h2>
 
-          {% if post.type == 'medium' %}
+          {% if link.type == 'medium' %}
             <span class="post-type"><i class="fa fa-medium"></i> Post |</span>
-          {% elsif post.type == 'slideshare' %}
+          {% elsif link.type == 'slideshare' %}
             <span class="post-type"><i class="fa fa-slideshare"></i> Slides deck |</span>
-          {% elsif post.type == 'project' %}
+          {% elsif link.type == 'project' %}
             <span class="post-type"><i class="fa fa-external-link-square"></i> Project |</span>
           {% endif %}
           
-          <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <span class="post-meta">{{ link.date | date: "%b %-d, %Y" }}</span>
 
       </div>
       {% endfor %}
