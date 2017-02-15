@@ -17,7 +17,7 @@ title: "rightright.me feed"
   {% for link in site.links limit:20 %}
   <entry>
     <title>{{ link.title }}</title>
-    <link href="home_url{{ link.anchor }}"/>
+    <link href="{{ link.anchor }}"/>
     <updated>{{ link.date | date_to_xmlschema }}</updated>
   </entry>
   {% endfor %}
