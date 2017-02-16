@@ -12,14 +12,14 @@ layout: default
             <a class="post-link" href="{{ link.anchor }}" target="_blank">{{ link.title | escape }}</a>
           </h2>
 
-          <span class="post-description"> {{ link.desc }} | </span>
+          <span class="post-description"><i>{{ link.desc }} </i>| </span>
 
           {% if link.type == 'medium' %}
-            <span class="post-type"><i class="fa fa-medium"></i> Post |</span>
+            <span class="post-type"><i class="fa fa-medium"></i> post |</span>
           {% elsif link.type == 'slideshare' %}
-            <span class="post-type"><i class="fa fa-slideshare"></i> Slides deck |</span>
+            <span class="post-type"><i class="fa fa-slideshare"></i> slides deck |</span>
           {% elsif link.type == 'project' %}
-            <span class="post-type"><i class="fa fa-external-link-square"></i> Project |</span>
+            <span class="post-type"><i class="fa fa-external-link-square"></i> project |</span>
           {% endif %}
           
           <span class="post-meta">{{ link.date | date: "%b %-d, %Y" }}</span>
