@@ -7,18 +7,13 @@ layout: default
 
       {% for link in site.links reversed%}
       <div class="post-container">
-          <!--<div class="grid">-->
-            <!--<div class="unit one-sixth">
-              
-            </div>
-            <div class="unit five-sixths">-->
 
               {% if link.type == 'medium' %}
-              <span class="post-type">POST |</span>
+              <span class="post-type">POST</span>
               {% elsif link.type == 'slideshare' %}
-              <span class="post-type">SLIDES | </span>
+              <span class="post-type">SLIDES</span>
               {% elsif link.type == 'project' %}
-              <span class="post-type">PROJECT | </span>
+              <span class="post-type">PROJECT</span>
               {% endif %}
 
               <span class="post-meta">{{ link.date | date: "%b %-d, %Y" }}</span>
@@ -28,8 +23,6 @@ layout: default
               </h2>
 
               <span class="post-description"><i>{{ link.desc }} </i></span>
-            <!--</div>-->
-          <!--</div>-->
 
       </div>
       {% endfor %}
