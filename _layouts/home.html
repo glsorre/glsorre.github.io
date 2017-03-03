@@ -7,24 +7,29 @@ layout: default
 
       {% for link in site.links reversed%}
       <div class="post-container">
+          <!--<div class="grid">-->
+            <!--<div class="unit one-sixth">
+              
+            </div>
+            <div class="unit five-sixths">-->
 
-          <h2 class="post-title">
-            <a class="post-link" href="{{ link.anchor }}" target="_blank">{{ link.title | escape }}</a>
-          </h2>
+              {% if link.type == 'medium' %}
+              <span class="post-type">POST |</span>
+              {% elsif link.type == 'slideshare' %}
+              <span class="post-type">SLIDES | </span>
+              {% elsif link.type == 'project' %}
+              <span class="post-type">PROJECT | </span>
+              {% endif %}
 
-          <span class="post-description"><i>{{ link.desc }} </i>| </span>
+              <span class="post-meta">{{ link.date | date: "%b %-d, %Y" }}</span>
 
-          {% if link.type == 'medium' %}
-            <span class="post-type"><i class="fa fa-medium"></i> post |</span>
-          {% elsif link.type == 'slideshare' %}
-            <span class="post-type"><i class="fa fa-slideshare"></i> slides deck |</span>
-          {% elsif link.type == 'project' %}
-            <span class="post-type"><i class="fa fa-external-link-square"></i> project |</span>
-          {% endif %}
-          
-          <span class="post-meta">{{ link.date | date: "%b %-d, %Y" }}</span>
+              <h2 class="post-title">
+                <a class="post-link" href="{{ link.anchor }}" target="_blank">{{ link.title | escape }}</a>
+              </h2>
 
-          
+              <span class="post-description"><i>{{ link.desc }} </i></span>
+            <!--</div>-->
+          <!--</div>-->
 
       </div>
       {% endfor %}

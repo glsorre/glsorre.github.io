@@ -814,14 +814,17 @@ body {
 
 	.nav-link {
 		display: inline-block;
-		padding: 35px 21px 0 21px;
+    border: 1px solid $text-color;
+		padding: 15px 15px 10px 15px;
+    margin-top: 18px;
 		font-size: 21px;
 		font-family: "Scope One", sans;
-		color: $text-color;
+    color: $text-color;
 		text-decoration: none;
-
+    border-radius: 3px;
 		&:hover {
 			color: $brand-color;
+      border: 1px solid $brand-color;
 		}
 
 		i {
@@ -831,40 +834,29 @@ body {
 }
 
 @media only screen and (max-width: 800px) {
-	.nav {
-		text-align: right;
-		.nav-link {
-			padding: 35px 21px 0 21px;
-		}
-	}
-	.header .grid {
-   	display: block;
-  	margin-left: auto;
-  	margin-right: auto;
-  }
-  .header .grid .unit {
-    float: left;
-  	min-height: 1px;
-		padding: 0 0 0 15px;
-  }
+	// .nav {
+	// 	text-align: right;
+	// 	.nav-link {
+	// 		margin-top: 0;
+	// 	}
+	// }
+	// .header .grid {
+  //  	display: block;
+  // 	margin-left: auto;
+  // 	margin-right: auto;
+  // }
+  // .header .grid .unit {
+  //   float: left;
+  // 	min-height: 1px;
+	// 	padding: 0 0 0 15px;
+  // }
 }
 
 @media only screen and (max-width: 600px) {
 	.nav {
     text-align: left;
     .nav-link {
-      padding: 0 15px;
-      background: $text-color;
-      height: 40px;
-      line-height: 40px;
-      color: $background-color;
-      border-radius: 3px;
-      &:hover {
-        color: $background-color;
-      }
-      &:visited {
-        color: $background-color;
-      }
+      margin-top: 0;
       i {
         padding: 0 0 0 7px;
       }
@@ -934,7 +926,8 @@ a {
 }
 
 .post-container, .post-header {
-	padding-top: 21px;
+	padding: 21px 0;
+  //border-bottom: 3px solid #fff;
 }
 
 .footer {
