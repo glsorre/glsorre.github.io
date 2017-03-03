@@ -873,10 +873,13 @@ h1, h2, h3, h4, h5, h6 {
 a {
 	color: $brand-color;
 	&:hover {
-		color: $brand-color;
+		color: darken($brand-color, 5%);
 	}
 	&:visited {
 		color: $brand-color;
+    &:hover {
+      color: darken($brand-color, 15%);
+    }
 	}
 }
 
@@ -908,8 +911,10 @@ a {
   display: inline-block;
   text-align: center;
   padding: 0 5px;
-  border-radius: 3px;
-  border: 1px solid;
+  //border-radius: 3px;
+  border: 1px solid $text-color;
+  border-left: none;
+  margin-right: 5px;
 }
 
 .post-container, .post-header {
