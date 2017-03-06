@@ -911,7 +911,12 @@ a {
   display: inline-block;
   text-align: center;
   padding: 0 5px;
-  //border-radius: 3px;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
   border: 1px solid $text-color;
   border-left: none;
   margin-right: 5px;
