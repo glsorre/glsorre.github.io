@@ -16,7 +16,6 @@ $text-color:       #322933;
 $background-color: lighten($text-color, 80%);
 $brand-color:      #69b161;
 
-// $green:#69b161;
 $grey-color: $text-color;
 
 /*! tatami.css v0.5 | MIT License |
@@ -777,6 +776,7 @@ WRITE YOUR TATAMI STYLE BELOW
 .grid .grid {
   margin: 0 -12.5px;
 }
+
 @media only screen and (max-width: 600px) {
   .grid {
     margin: 0 15px;
@@ -945,9 +945,10 @@ a {
 .footer {
   background: $text-color;
   color: $background-color;
-  margin-top: 35px;
+  margin-top: 36px;
 
   .author-copyright {
-    font-size: 9px;
+    font-size: 12px;
+    line-height: 18px;
   }
 }
