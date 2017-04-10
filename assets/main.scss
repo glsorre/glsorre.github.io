@@ -797,6 +797,7 @@ html {
 
 body {
   font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   min-height: 100%;
   display: flex;
   flex-direction: column;
@@ -815,10 +816,10 @@ body {
 	.nav-link {
 		display: inline-block;
     border: 1px solid $text-color;
-		padding: 15px 15px 10px 15px;
-    margin-top: 10px;
+		padding: 10px 15px 10px 15px;
+    margin-top: 16px;
 		font-size: 21px;
-		font-family: "Scope One", sans;
+		font-family: "Source Sans Pro", sans-serif;
     color: $text-color;
 		text-decoration: none;
     border-radius: 3px;
@@ -864,7 +865,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   color: $brand-color;
-	font-family: "Scope One", sans;
+	font-family: "Source Sans Pro", sans-serif;
 	a {
 		text-decoration: underline;
 	}
@@ -886,6 +887,7 @@ a {
 .logo {
 	text-indent: -9999px;
 	a {
+    margin: 20px 0;
 		display: block;
 		width: 160px;
   	height: 41px;
@@ -900,7 +902,7 @@ a {
 }
 
 .description {
-	font-family: "Scope One", sans;
+	font-family: "Source Sans Pro", sans-serif;
 	font-size: 21px;
 	b {
 		color: $brand-color;
@@ -920,6 +922,10 @@ a {
       border-bottom: 1px solid darken($brand-color, 15%);
     }
 	}
+}
+
+.post-description {
+  font-size: 16px;
 }
 
 .post-type {
