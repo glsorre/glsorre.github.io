@@ -51,7 +51,7 @@ body {
 		font-family: "Source Sans Pro", sans-serif;
     color: $text-color;
 		text-decoration: none;
-    border-radius: 3px;
+    //border-radius: 3px;
 		&:hover {
 			color: $brand-color;
       border: 1px solid $brand-color;
@@ -118,14 +118,14 @@ a {
 	text-indent: -9999px;
 	a {
 		display: block;
-		width: 160px;
-  	height: 41px;
+		width: 211px;
+  	height: 42px;
   	background: url("/assets/rightright_logo.svg") no-repeat 0px 0px;
-  	background-size: 160px 92px;
+  	background-size: 211px 95px;
 
 		&:hover {
-			background: url("/assets/rightright_logo.svg") no-repeat 0px -51px;
-    	background-size: 160px 92px;
+			background: url("/assets/rightright_logo.svg") no-repeat 0px -52px;
+    	background-size: 211px 95px;
 		}
 	}
 }
