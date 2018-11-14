@@ -17,7 +17,7 @@ title: right | right
 email: giuseppe@rightright.me
 author: Giuseppe Sorrentino
 description: > # this means to ignore newlines until "baseurl:"
-  i am <a target="_blank" href="#contacts">giuseppe sorrentino</a>
+  i am <a href="#contacts">giuseppe sorrentino</a>
   and this is my personal digital playground
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://rightright.me" # the base hostname & protocol for your site, e.g. http://example.com
