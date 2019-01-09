@@ -14,6 +14,8 @@ layout: default
               <span class="post-type">SLIDES</span>
               {% elsif link.type == 'project' %}
               <span class="post-type">PROJECT</span>
+              {% elsif link.type == 'gist' %}
+              <span class="post-type">GIST</span>
               {% endif %}
 
               <span class="post-meta">{{ link.date | date: "%b %-d, %Y" }}</span>
