@@ -159,8 +159,19 @@ a {
   border-left: 3px solid $text-color;
 }
 
+.project-container:first-child {
+	padding-top: 28px
+}
+
 .post-container, .post-header {
 	padding: 28px 0;
+}
+
+.project-container {
+	padding: 56px 0;
+	img {
+		padding: 14px 0;
+	}
 }
 
 .footer {

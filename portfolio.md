@@ -3,11 +3,7 @@ title: "portfolio"
 layout: page
 ---
 
-<div class="post-container">
-    <h1>Portfolio</h1>
-</div>
-
-<div class="post-container">
+<div class="project-container">
     <span class="post-type">WIREFRAMES</span>
 
     <h2 class="post-title">
@@ -28,7 +24,7 @@ layout: page
     <img src="/assets/portfolio_assets/portfolio_001-02.png" alt="prova" />
 </div>
 
-<div class="post-container">
+<div class="project-container">
     <span class="post-type">WIREFRAMES</span>
 
     <h2 class="post-title">
@@ -51,7 +47,7 @@ layout: page
     <img src="/assets/portfolio_assets/portfolio_001-05.png" alt="prova" />
 </div>
 
-<div class="post-container">
+<div class="project-container">
     <span class="post-type">WIREFRAMES AND HIGH-FIDELITY</span>
 
     <h2 class="post-title">
@@ -66,7 +62,7 @@ layout: page
     <img src="/assets/portfolio_assets/portfolio_001-07.png" alt="prova" />
 </div>
 
-<div class="post-container">
+<div class="project-container">
     <span class="post-type">HIGH-FIDELITY</span>
 
     <h2 class="post-title">
