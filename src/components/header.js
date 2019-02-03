@@ -28,7 +28,7 @@ const Header = ({ siteTitle, menu }) => {
               .map(item => (
                 <Link
                   to={item.path}
-                  class="nav-link"
+                  className="nav-link"
                 >
                   {item.label}
                 </Link>
