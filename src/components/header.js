@@ -33,7 +33,7 @@ const Header = ({ siteTitle, menu }) => {
                   {item.label}
                 </Link>
               ))}
-              <a class="nav-link" href="https://rightright.me/feed.xml">feed</a>
+              <a class="nav-link" href="/feed.xml">feed</a>
             </nav>
           </div>
 
@@ -41,7 +41,7 @@ const Header = ({ siteTitle, menu }) => {
 
         <div class="grid">
           <p class="unit whole description">
-            i am <a href="#contacts">giuseppe sorrentino</a> and this is my personal digital playground
+          i am <Link to="/aboutme">giuseppe sorrentino</Link> and this is my personal digital playground
           </p>
         </div>
 

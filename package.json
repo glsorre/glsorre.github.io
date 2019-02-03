@@ -17,6 +17,7 @@
     "gatsby-source-filesystem": "^2.0.20",
     "gatsby-transformer-remark": "^2.2.3",
     "gatsby-transformer-sharp": "^2.1.13",
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.11.0",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
@@ -42,5 +43,8 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "scripts": {
+    "deploy": "gatsby build && gh-pages -d public -b master"
   }
 }
