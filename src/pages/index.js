@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -37,7 +38,7 @@ const IndexPage = ({
                   <span class="post-meta">{ link.node.frontmatter.date }</span>
 
                   <h2 class="post-title">
-                    <a class="post-link" href={ link.node.frontmatter.anchor } target="_blank">{ link.node.frontmatter.title }</a>
+                    <OutboundLink class="post-link" href={ link.node.frontmatter.anchor } target="_blank">{ link.node.frontmatter.title }</OutboundLink>
                   </h2>
 
                   <span class="post-description"><i>{ link.node.frontmatter.desc } </i></span>

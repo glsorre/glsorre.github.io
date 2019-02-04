@@ -99,7 +99,7 @@ body {
 .container {
   flex: 1;
 	width: 100%;
-	min-height: calc(100vh - 74px);
+	min-height: calc(100vh - 80px);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -192,6 +192,23 @@ a {
 
   .author-copyright {
     font-size: 12px;
-    line-height: 18px;
-  }
+    line-height: 22px;
+	}
+	
+	.author-social {
+		float: right;
+		height: 24px;
+
+		a {
+			color: $background-color;
+			display: inline-block;
+			margin: 0 10px;
+			font-size: 22px;
+			line-height: 24px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
 }

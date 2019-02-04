@@ -63,7 +63,10 @@ module.exports = {
               quality: 50,
               wrapperStyle: "margin-top:14px;",
             },
-          }
+          },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
         ],
       },
     },
