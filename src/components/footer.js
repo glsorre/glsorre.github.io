@@ -11,9 +11,9 @@ const Footer = () => (
       </div>
       <div class="unit half">
         <p class="author-social">
-          <a href="" href="https://twitter.com/glsorre"><FaTwitter /></a> 
-          <a href="" href="https://twitter.com/glsorre"><FaLinkedin /></a> 
-          <a href="" href="https://github.com/glsorre"><FaGithub /></a> 
+          <a target="_blank" href="https://twitter.com/glsorre"><FaTwitter /></a> 
+          <a target="_blank" href="https://it.linkedin.com/in/glsorrentino"><FaLinkedin /></a> 
+          <a target="_blank" href="https://github.com/glsorre"><FaGithub /></a> 
         </p>
       </div>
     </div>
