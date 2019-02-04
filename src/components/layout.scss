@@ -81,7 +81,16 @@ body {
     width: auto;
     float: none;
     padding: 0;
-  }
+	}
+	
+	footer {
+		.grid {
+		.unit {
+			float: left;
+			width: 50%;
+		}
+		}
+	}
 }
 
 #___gatsby {
@@ -188,11 +197,11 @@ a {
 .footer {
   background: $text-color;
   color: $background-color;
-  margin-top: 36px;
+	margin-top: 36px;
 
   .author-copyright {
     font-size: 12px;
-    line-height: 22px;
+		line-height: 22px;
 	}
 	
 	.author-social {
