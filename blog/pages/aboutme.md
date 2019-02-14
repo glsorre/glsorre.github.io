@@ -3,24 +3,21 @@ title: "about me"
 path: "/aboutme"
 ---
 
-# About Me
+
 
 <div class="home grid">
 
-<div class="unit whole">
-
-## Summary
-
-</div>
-
-<div class="unit one-third">
+<div class="unit half">
 
 ![portrait](./aboutme_assets/portrait.png)
 
 </div>
-<div class="unit two-thirds">
 
+<div class="unit half">
 
+# About Me
+
+## Summary
 
 I am a professional with a long experience in **ux design/research** and **software development** (particularly web development). I am an **agile enthusiast** too.
 
@@ -40,13 +37,6 @@ Particularly I am proficient in:
 - Docker;
 - Other programming Languages: Java, Ruby, R, C
 
-</div>
-
-</div>
-
-<div class="grid">
-<div class="unit whole">
-
 ## Contacts
 
 - **Mail**: giuseppe [at] rightright [dot] me.
@@ -55,4 +45,5 @@ Particularly I am proficient in:
 - **Github**: <a href="https://github.com/glsorre" target="_blank">@glsorre</a>
 
 </div>
+
 </div>
