@@ -5,9 +5,22 @@ path: "/aboutme"
 
 # About Me
 
-![portrait](./aboutme_assets/portrait.jpg)
+<div class="home grid">
+
+<div class="unit whole">
 
 ## Summary
+
+</div>
+
+<div class="unit one-third">
+
+![portrait](./aboutme_assets/portrait.png)
+
+</div>
+<div class="unit two-thirds">
+
+
 
 I am a professional with a long experience in **ux design/research** and **software development** (particularly web development). I am an **agile enthusiast** too.
 
@@ -27,20 +40,19 @@ Particularly I am proficient in:
 - Docker;
 - Other programming Languages: Java, Ruby, R, C
 
+</div>
+
+</div>
+
+<div class="grid">
+<div class="unit whole">
+
 ## Contacts
 
-### Mail
+- **Mail**: giuseppe [at] rightright [dot] me.
+- **Twitter**: <a href="https://twitter.com/glsorre" target="_blank">@glsorre</a>
+- **Linkedin**: <a href="https://it.linkedin.com/in/glsorrentino" target="_blank">Giuseppe Sorrentino</a>
+- **Github**: <a href="https://github.com/glsorre" target="_blank">@glsorre</a>
 
-giuseppe [at] rightright [dot] me.
-
-### Twitter
-
-<a href="https://twitter.com/glsorre" target="_blank">@glsorre</a>
-
-### Linkedin
-
-<a href="https://it.linkedin.com/in/glsorrentino" target="_blank">Giuseppe Sorrentino</a>
-
-### Github
-
-<a href="https://github.com/glsorre" target="_blank">@glsorre</a>
+</div>
+</div>
