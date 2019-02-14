@@ -9,7 +9,7 @@ path: "/aboutme"
 
 <div class="unit half">
 
-![portrait](./aboutme_assets/portrait.png)
+![portrait](./aboutme_assets/circle.png)
 
 </div>
 
