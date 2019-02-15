@@ -62,6 +62,8 @@ module.exports = {
               maxWidth: 1145,
               quality: 50,
               wrapperStyle: "margin-top:14px;",
+              linkImagesToOriginal : false,
+              backgroundColor: "transparent"
             },
           },
           `gatsby-remark-prismjs`,
@@ -134,7 +136,7 @@ module.exports = {
         // Setting this parameter is optional
         anonymize: true,
         // Setting this parameter is also optional
-        respectDNT: false,
+        respectDNT: true,
         // Avoids sending pageview hits from custom paths
         exclude: [],
         // Enables Google Optimize using your container Id
