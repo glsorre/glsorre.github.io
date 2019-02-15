@@ -134,7 +134,7 @@ module.exports = {
         // Setting this parameter is optional
         anonymize: true,
         // Setting this parameter is also optional
-        respectDNT: true,
+        respectDNT: false,
         // Avoids sending pageview hits from custom paths
         exclude: [],
         // Enables Google Optimize using your container Id
@@ -146,7 +146,7 @@ module.exports = {
         // Any additional create only fields (optional)
         sampleRate: 5,
         siteSpeedSampleRate: 10,
-        cookieDomain: "example.com",
+        cookieDomain: "rightright.me",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
