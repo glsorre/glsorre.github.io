@@ -6,6 +6,10 @@ module.exports = {
     siteUrl: "rightrght.me",
     menu: [
       {
+        label: 'blog',
+        path: '/blog'
+      },
+      {
         label: 'portfolio',
         path: '/portfolio'
       },
@@ -132,7 +136,7 @@ module.exports = {
       options: {
         trackingId: "UA-132556016-1",
       },
-    },
+    }
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     //'gatsby-plugin-offline',

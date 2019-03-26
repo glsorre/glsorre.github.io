@@ -8,7 +8,7 @@ const Header = ({ siteTitle, menu }) => {
   return (
     <Location>
     {({ location }) => (
-      <header class="header" role="banner">
+      <header class="header">
         <div class="grid">
 
           <div class="unit golden-small">
@@ -29,6 +29,7 @@ const Header = ({ siteTitle, menu }) => {
                 <Link
                   to={item.path}
                   className="nav-link"
+                  state={{ filterLink: 'all' }}
                 >
                   {item.label}
                 </Link>
@@ -37,12 +38,6 @@ const Header = ({ siteTitle, menu }) => {
             </nav>
           </div>
 
-        </div>
-
-        <div class="grid">
-          <p class="unit whole description">
-          i am <Link to="/aboutme">giuseppe sorrentino</Link> and this is my personal digital playground
-          </p>
         </div>
 
       </header>

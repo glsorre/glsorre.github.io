@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 
 import Layout from "../components/layout"
@@ -10,41 +10,34 @@ const IndexPage = ({
       allMarkdownRemark: { edges },
     },
   }) => {
-    return (  
+    return (
       <Layout>
         <SEO title="Home" keywords={[`blog`, `rightright`, `giuseppe sorrentino`]} />
         <div class="home grid">
           <div class="unit whole">
+            <h2 id="welcome">Welcome!</h2>
+            <p>I am <b>Giuseppe Sorrentino</b> and this is my personal digital playground.</p>
+          </div>
+        </div>
+        <div class="home grid">
+          <div class="unit whole">
+            <div class="intro-container">
+              <h1 class="intro-title"><span>I am a</span> <Link to="/blog" state={{ filterLink: 'project' }}>developer</Link></h1>
+              <p class="intro-paragraph">I work as User Interface Engineer II and Hotels.com. I write useful and usable code.</p>
+            </div>
+            <div class="intro-container">
+              <h1 class="intro-title"><span>I am a</span> <Link to="/portfolio">UX specialist</Link></h1>
+              <p class="intro-paragraph">I design useful and beautiful wireframes and mockups. I do user research as well.</p>
+            </div>
 
-            {edges.map(link => {
-
-              let label;
-
-              if (link.node.frontmatter.type == 'medium') {
-                label = <span class="post-type">POST</span>;
-              } else if (link.node.frontmatter.type == 'slideshare') {
-                label = <span class="post-type">SLIDES</span>;
-              } else if (link.node.frontmatter.type == 'project') {
-                label = <span class="post-type">PROJECT</span>;
-              } else if (link.node.frontmatter.type == 'gist') {
-                label = <span class="post-type">GIST</span>;
-              }
-              
-              return (
-                <div class="post-container">
-
-                  {label}
-
-                  <span class="post-meta">{ link.node.frontmatter.date }</span>
-
-                  <h2 class="post-title">
-                    <OutboundLink class="post-link" href={ link.node.frontmatter.anchor } target="_blank">{ link.node.frontmatter.title }</OutboundLink>
-                  </h2>
-
-                  <span class="post-description"><i>{ link.node.frontmatter.desc } </i></span>
-                </div>
-              )}
-            )}
+            <div class="intro-container">
+              <h1 class="intro-title"><span>I am a </span><Link to="/blog" state={{ filterLink: 'post' }}>writer</Link><span> and a </span><Link to="/blog" state={{ filterLink: 'slides' }}>speaker</Link></h1>
+              <p class="intro-paragraph">I talk and write about ux, agile and development.</p>
+            </div>
+            
+            <div class="intro-container">
+              <h1 class="intro-title"><span>Contact</span> <Link to="/aboutme">me</Link>!</h1>
+            </div>
 
           </div>
         </div>
