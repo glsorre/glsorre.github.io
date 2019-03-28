@@ -1,122 +1,118 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import React, {useState, useEffect} from "react"
+import { graphql } from "gatsby"
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
-import { Location } from '@reach/router';
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BlogFilter from "../components/blog_filter"
 
-class IndexPage extends React.Component {
-  state = {
-    edges: this.props.data.allMarkdownRemark.edges, 
-    //filteredEdges: this.props.data.allMarkdownRemark.edges
+const BlogPage = (props) => {
+  const [edges, setEdges] = useState([])
+
+  useEffect(() => {
+    setEdges(props.data.allMarkdownRemark.edges.filter(
+      edge => {
+        if (props.location.state.filterLink == 'all') {
+          return true
+        } else {
+          return props.location.state.filterLink == edge.node.frontmatter.type
+        }
+      }))
+  });
+
+  const filterEdges = () => {
+    console.log('prova')
   }
 
-  filterEdges = (filter) => {
-    // const tempEdges = this.state.edges.filter((edge) => {
-    //   if (filter == 'all') {
-    //     return true
-    //   } else {
-    //     return edge.node.frontmatter.type == filter
-    //   }
-    // })
-    this.setState({
-      //filteredEdges: tempEdges,
-      filterLink: filter
-    })
-  }
+  return (
+    <Layout location={props.location}>
+      <SEO title="Blog" keywords={[`blog`, `rightright`, `giuseppe sorrentino`]} />
 
-  render() {
-    return (
-      <Location>
-        {({ location }) => (
-          <Layout>
-            <SEO title="Blog" keywords={[`blog`, `rightright`, `giuseppe sorrentino`]} />
+      <div class="home grid">
 
-            <div class="home grid">
+        <div class="unit whole">
 
-              <div class="unit whole">
+          <h1>Blog</h1>
 
-                <h1>Blog</h1>
+          <div class="post-container">
+            <BlogFilter
+              value={'all'}
+              onHeaderClick={filterEdges}
+              filterLink={props.location.state.filterLink}
+            />
 
-                <div class="post-container">
-                  <BlogFilter
-                    value={'all'}
-                    onHeaderClick={this.filterEdges}
-                    filterLink={location.state.filterLink}
-                  />
+            <BlogFilter
+              value={'post'}
+              onHeaderClick={filterEdges}
+              filterLink={props.location.state.filterLink}
+            />
 
-                  <BlogFilter
-                    value={'post'}
-                    onHeaderClick={this.filterEdges}
-                    filterLink={location.state.filterLink}
-                  />
+            <BlogFilter
+              value={'slides'}
+              onHeaderClick={filterEdges}
+              filterLink={props.location.state.filterLink}
+            />
 
-                  <BlogFilter
-                    value={'slides'}
-                    onHeaderClick={this.filterEdges}
-                    filterLink={location.state.filterLink}
-                  />
+            <BlogFilter
+              value={'project'}
+              onHeaderClick={filterEdges}
+              filterLink={props.location.state.filterLink}
+            />
 
-                  <BlogFilter
-                    value={'project'}
-                    onHeaderClick={this.filterEdges}
-                    filterLink={location.state.filterLink}
-                  />
+            <BlogFilter
+              value={'gist'}
+              onHeaderClick={filterEdges}
+              filterLink={props.location.state.filterLink}
+            />
 
-                  <BlogFilter
-                    value={'gist'}
-                    onHeaderClick={this.filterEdges}
-                    filterLink={location.state.filterLink}
-                  />
+          </div>
 
-                </div>
+          <TransitionGroup className="post-list">
+          {edges.map(link => {
 
+              let label
 
-                {this.state.edges.map(link => {
+              if (link.node.frontmatter.type == 'post') {
+                label = <span class="post-type">POST</span>;
+              } else if (link.node.frontmatter.type == 'slides') {
+                label = <span class="post-type">SLIDES</span>;
+              } else if (link.node.frontmatter.type == 'project') {
+                label = <span class="post-type">PROJECT</span>;
+              } else if (link.node.frontmatter.type == 'gist') {
+                label = <span class="post-type">GIST</span>;
+              }
+              
+              return (
+                <CSSTransition
+                  key={link.node.id}
+                  timeout={500}
+                  classNames="animation"
+                >
+                  <div className={"post-container"}>
 
-                    let label
+                    {label}
 
-                    if (link.node.frontmatter.type == 'post') {
-                      label = <span class="post-type">POST</span>;
-                    } else if (link.node.frontmatter.type == 'slides') {
-                      label = <span class="post-type">SLIDES</span>;
-                    } else if (link.node.frontmatter.type == 'project') {
-                      label = <span class="post-type">PROJECT</span>;
-                    } else if (link.node.frontmatter.type == 'gist') {
-                      label = <span class="post-type">GIST</span>;
-                    }
-                    
-                    return (
-                      <div className={"post-container " + (location.state.filterLink == link.node.frontmatter.type || location.state.filterLink == "all" ? 'show' : 'hidden')}>
+                    <span class="post-meta">{link.node.frontmatter.date}</span>
 
-                        {label}
+                    <h2 class="post-title">
+                      <OutboundLink class="post-link" href={link.node.frontmatter.anchor} target="_blank">{link.node.frontmatter.title}</OutboundLink>
+                    </h2>
 
-                        <span class="post-meta">{link.node.frontmatter.date}</span>
+                    <span class="post-description"><i>{link.node.frontmatter.desc} </i></span>
+                  </div>
+                </CSSTransition>
+              )}
 
-                        <h2 class="post-title">
-                          <OutboundLink class="post-link" href={link.node.frontmatter.anchor} target="_blank">{link.node.frontmatter.title}</OutboundLink>
-                        </h2>
-
-                        <span class="post-description"><i>{link.node.frontmatter.desc} </i></span>
-                      </div>
-                    )}
-
-                  )}
-              </div>
-            </div>
-          </Layout>
-        )}
-      </Location>
-    )
-  }
+            )}
+            </TransitionGroup>
+        </div>
+      </div>
+    </Layout>
+  )
 }
 
-export default () => <StaticQuery
-  query={pageQuery}
-  render={data => <IndexPage data={data}/>}
-/>
+export default BlogPage
 
 export const pageQuery = graphql`
   query {

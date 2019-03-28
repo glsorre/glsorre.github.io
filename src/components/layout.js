@@ -7,7 +7,7 @@ import Footer from "./footer"
 import "./layout.scss"
 import "typeface-source-sans-pro"
 
-const Layout = ({ children }) => {
+const Layout = ({ location, children }) => {
   return (
   <StaticQuery
     query={graphql`
@@ -23,12 +23,15 @@ const Layout = ({ children }) => {
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <>
         <div class="container">
-          <Header siteTitle={data.site.siteMetadata.title} menu={data.site.siteMetadata.menu} />
+          <Header siteTitle={data.site.siteMetadata.title}
+                  menu={data.site.siteMetadata.menu}
+                  location={location} />
         
           {children}
+
         </div>
         <Footer />
       </>
@@ -38,6 +41,7 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  location: PropTypes.node.isRequired
 }
 
 export default Layout

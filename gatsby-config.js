@@ -6,14 +6,17 @@ module.exports = {
     siteUrl: "rightrght.me",
     menu: [
       {
+        id: 1,
         label: 'blog',
         path: '/blog'
       },
-      {
+      { 
+        id: 2,
         label: 'portfolio',
         path: '/portfolio'
       },
-      {
+      { 
+        id: 3,
         label: 'about me',
         path: '/aboutme'
       },
