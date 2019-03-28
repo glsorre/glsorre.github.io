@@ -25,10 +25,6 @@ const BlogPage = (props) => {
       }))
   });
 
-  const filterEdges = () => {
-    console.log('prova')
-  }
-
   return (
     <Layout location={props.location}>
       <SEO title="Blog" keywords={[`blog`, `rightright`, `giuseppe sorrentino`]} />
@@ -42,31 +38,26 @@ const BlogPage = (props) => {
           <div class="post-container">
             <BlogFilter
               value={'all'}
-              onHeaderClick={filterEdges}
               filterLink={props.location.state.filterLink}
             />
 
             <BlogFilter
               value={'post'}
-              onHeaderClick={filterEdges}
               filterLink={props.location.state.filterLink}
             />
 
             <BlogFilter
               value={'slides'}
-              onHeaderClick={filterEdges}
               filterLink={props.location.state.filterLink}
             />
 
             <BlogFilter
               value={'project'}
-              onHeaderClick={filterEdges}
               filterLink={props.location.state.filterLink}
             />
 
             <BlogFilter
               value={'gist'}
-              onHeaderClick={filterEdges}
               filterLink={props.location.state.filterLink}
             />
 
@@ -92,6 +83,8 @@ const BlogPage = (props) => {
                   key={link.node.id}
                   timeout={700}
                   classNames="animation"
+                  unmountOnExit
+                  mountOnEnter
                 >
                   <div className={"post-container"}>
 

@@ -1,5 +1,5 @@
 ---
-title: "Expedia code academy: introdution to computation using python"
+title: "expedia code academy: introdution to computation using python"
 type: "project"
 anchor: "https://rightright.me/icup_course"
 date: "2018-11-09T11:00:00+01:00"

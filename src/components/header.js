@@ -1,9 +1,16 @@
 import { Link } from "gatsby"
-import React, {useState, useEffect} from "react"
+import React, { useState, useEffect } from "react"
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 import "./rightright_logo.svg"
 
 const Header = ({ siteTitle, menu, location }) => {
+  const [menuAn, setMenuAn] = useState([])
+
+  useEffect(() => {
+    setMenuAn(menu)
+  })
+
   return (
     <header class="header">
       <div class="grid">
@@ -19,18 +26,26 @@ const Header = ({ siteTitle, menu, location }) => {
         </div>
 
         <div class="unit golden-big">
-          <nav class="nav">
-            {menu.map(item => (
-              <Link
-                to={item.path}
-                className="nav-link"
-                state={{ filterLink: "all" }}
-              >
-                {item.label}
-              </Link>
-            ))}  
-            <a class="nav-link" href="/feed.xml">feed</a>
-          </nav>
+          <TransitionGroup class="nav">
+            {menuAn
+            .filter(item => item.path != location.pathname)
+            .map(item => (
+              <CSSTransition
+                  key={item.id}
+                  timeout={700}
+                  classNames="animation"
+                  mountOnEnter
+                >
+                <Link
+                  to={item.path}
+                  className="nav-link"
+                  state={{ filterLink: "all" }}
+                >
+                  {item.label}
+                </Link>
+              </CSSTransition>
+            ))}
+          </TransitionGroup>
         </div>
 
       </div>

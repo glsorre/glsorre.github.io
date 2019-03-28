@@ -1,5 +1,5 @@
 ---
-title: "Three things I learnt being a scrum master"
+title: "three things I learnt being a scrum master"
 type: "post"
 anchor: "https://medium.com/@glsorre/7af04752b764"
 date: "2019-02-01T11:00:00+01:00"
