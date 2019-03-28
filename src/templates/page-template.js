@@ -19,7 +19,12 @@ const Template = (props) => {
   return (
     <Layout location={props.location}>
       <SEO title={frontmatter.title} keywords={[`blog`, `rightright`, `giuseppe sorrentino`]} />
-      <CSSTransition in={animation} timeout={500} classNames="animation">
+      <CSSTransition in={animation} timeout={700} classNames="animation" unmountOnExit onEntering={() => {
+        const elements = document.querySelectorAll(".gatsby-resp-image-background-image")
+        for (let element of elements) {
+          element.style.background = 'none'
+        }
+      }}>
         <div class="home grid">
           <div
           class="unit whole"

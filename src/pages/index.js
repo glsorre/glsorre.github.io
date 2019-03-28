@@ -9,14 +9,13 @@ const IndexPage = (props) => {
   const [animation, setAnimation] = useState(false)
 
   useEffect(() => {
-    // Update the document title using the browser API
     setAnimation(true)
   });
 
   return (
     <Layout location={props.location}>
-      <SEO title="Home" keywords={[`blog`, `rightright`, `giuseppe sorrentino`]} />
-      <CSSTransition in={animation} timeout={500} classNames="animation">
+      <SEO title="Home" keywords={[`home`, `rightright`, `giuseppe sorrentino`]} />
+      <CSSTransition in={animation} timeout={700} classNames="animation" unmountOnExit>
         <div>
           <div class="home grid">
             <div class="unit whole">

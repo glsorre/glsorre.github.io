@@ -90,7 +90,7 @@ const BlogPage = (props) => {
               return (
                 <CSSTransition
                   key={link.node.id}
-                  timeout={500}
+                  timeout={700}
                   classNames="animation"
                 >
                   <div className={"post-container"}>

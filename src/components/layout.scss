@@ -304,21 +304,20 @@ a.filter-anchor.active {
 		}
 	}
 }
-
 .animation {
-	opacity: 0
+	opacity: 0;
 }
 .animation-enter {
   opacity: 0;
 }
 .animation-enter-active {
   opacity: 1;
-  transition: opacity 500ms ease-in;
+  transition: opacity 700ms ease-in;
 }
 .animation-exit {
   opacity: 1;
 }
 .animation-exit-active {
   opacity: 0;
-  transition: opacity 500ms ease-in;
+  transition: opacity 700ms ease-out;
 }
