@@ -8,6 +8,10 @@ import SEO from "../components/seo"
 import BlogFilter from "../components/blog_filter"
 
 const BlogPage = (props) => {
+  if (props.location.state == null) {
+    props.location.state = { filterLink: "all" }
+  }
+
   const [edges, setEdges] = useState([])
 
   useEffect(() => {
