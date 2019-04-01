@@ -28,7 +28,13 @@ const Header = ({ siteTitle, menu, location }) => {
         <div class="unit golden-big">
           <TransitionGroup class="nav">
             {menuAn
-            .filter(item => item.path != location.pathname)
+            .filter(item => {
+              if ( location == null) {
+                return true
+              } else {
+                return item.path != location.pathname
+              }
+            })
             .map(item => (
               <CSSTransition
                   key={item.id}
