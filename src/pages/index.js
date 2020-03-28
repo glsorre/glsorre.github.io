@@ -35,35 +35,34 @@ const IndexPage = (props) => {
         <div>
           <div class="home grid">
             <div class="unit whole">
-              <div class="post-container">
-                <div class="selector-container">
-                  I am a: &nbsp;
-                  <BlogFilter
-                    value={'unicorn'}
-                    filterLink={props.location.state.filterLink}
-                  />
+              <div class="selector-container">
+                I am a: &nbsp;
+                <BlogFilter
+                  value={'unicorn'}
+                  filterLink={props.location.state.filterLink}
+                />
 
-                  <BlogFilter
-                    value={'writer'}
-                    filterLink={props.location.state.filterLink}
-                  />
+                <BlogFilter
+                  value={'writer'}
+                  filterLink={props.location.state.filterLink}
+                />
 
-                  <BlogFilter
-                    value={'speaker'}
-                    filterLink={props.location.state.filterLink}
-                  />
+                <BlogFilter
+                  value={'speaker'}
+                  filterLink={props.location.state.filterLink}
+                />
 
-                  <BlogFilter
-                    value={'developer'}
-                    filterLink={props.location.state.filterLink}
-                  />
+                <BlogFilter
+                  value={'developer'}
+                  filterLink={props.location.state.filterLink}
+                />
 
-                  <BlogFilter
-                    value={'designer'}
-                    filterLink={props.location.state.filterLink}
-                  />
-                </div>
+                <BlogFilter
+                  value={'designer'}
+                  filterLink={props.location.state.filterLink}
+                />
               </div>
+
               {edges.map(link => {
 
                 let label = <span class="post-type">{link.node.frontmatter.label}</span>;

@@ -34,7 +34,10 @@ body {
 
 .header {
 	padding: 14px 0;
-	margin-bottom: 28px;
+
+	img {
+		width: 200px;
+	}
 }
 
 .nav {
@@ -61,45 +64,24 @@ body {
 	}
 }
 
-@media only screen and (max-width: 800px) {
-
-}
-
 @media only screen and (max-width: 600px) {
 	.container {
 		min-height: calc(100vh - 135px) !important;
 	}
 
-	.nav {
-    text-align: left;
-    margin-top: 14px;
-    .nav-link {
-      margin: 10px 5px 0 0;
-      i {
-        padding: 0 0 0 7px;
-      }
-    }
-  }
-	.header .grid {
-   	margin: 0 15px;
-  }
-  .header .grid .unit {
-    width: auto;
-    float: none;
-    padding: 0;
+	.header img {
+		width: 150px;
 	}
 	
 	#contacts {
 		.author-contacts {
-			float: left;
-
 			&>:first-child {
 				margin-left: 0;
 			}
 
 			.others {
 				margin-left: 0;
-				margin-top: 10px;
+				//margin-top: 10px;
 
 				&>:first-child {
 					margin-left: 0;
@@ -199,10 +181,10 @@ a {
 
 .post-container, .post-header {
 	padding: 28px 0;
+}
 
-	.selector-container {
-		text-align: center;
-	}
+.selector-container {
+	text-align: center;
 }
 
 .hidden {
@@ -278,7 +260,7 @@ a.filter-anchor.active {
 	}
 	
 	.author-contacts {
-		float: right;
+		//float: right;
 		//height: 24px;
 
 		.email {

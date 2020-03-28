@@ -10,7 +10,7 @@ const Header = ({ location }) => {
           <div class="intro">
             <Link to="/"
                   state={{ filterLink: 'unicorn' }}>
-              <img class="sticker" alt="Hello, my name is Giuseppe Sorrentino and right|right is my personal brand." src="headerSticker_001.svg" width="200" height="150" />
+              <img class="sticker" alt="Hello, my name is Giuseppe Sorrentino and right|right is my personal brand." src="headerSticker_001.svg"/>
             </Link>
           </div>
         </div>

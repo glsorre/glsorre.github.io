@@ -4,12 +4,7 @@ import { FaEnvelope, FaTwitter, FaGithub, FaLinkedin, FaRss } from 'react-icons/
 const Footer = () => (
   <footer class="footer clearfix" id="contacts">
     <div class="grid">
-      <div class="unit one-quarter">
-        <p class="author-copyright">
-        &#169; {new Date().getFullYear()} rightright.me
-        </p>
-      </div>
-      <div class="unit three-quarters">
+      <div class="unit whole">
         <p class="author-contacts">
           <div class="email"><span><FaEnvelope /></span><span>giuseppe [at] rightright [dot] me</span></div> 
           <div class="others">
