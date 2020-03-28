@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 const BlogFilter = (props) => {
   return (
-    <Link to="/blog"
+    <Link to="/"
           className={"filter-anchor " + (props.filterLink == props.value ? 'active' : 'inactive')}
           state={{ filterLink: props.value }}>{props.value}
     </Link>

@@ -3,7 +3,7 @@ module.exports = {
     title: "right right",
     author: "@glsorre",
     description: "i am giuseppe sorrentino and this is my personal digital playground",
-    siteUrl: "rightrght.me",
+    siteUrl: "https://rightrght.me",
     menu: [
       {
         id: 1,
