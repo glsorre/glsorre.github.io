@@ -4,5 +4,5 @@ type: "developer"
 label: "project"
 anchor: "http://www.rightright.me/tatami"
 date: "2016-01-01T09:00:00+01:00"
-desc: "A lightweight, beautiful, responsive-ready and style-agnostic CSS boilerplate."
+desc: "a lightweight, beautiful, responsive-ready and style-agnostic CSS boilerplate."
 ---
