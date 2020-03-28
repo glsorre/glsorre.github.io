@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
-import { CSSTransition } from "react-transition-group"
+import { CSSTransition, TransitionGroup } from "react-transition-group"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -16,7 +16,7 @@ const IndexPage = (props) => {
 
     setEdges(props.data.allMarkdownRemark.edges.filter(
       edge => {
-        if (props.location.state.filterLink == 'unicorn') {
+        if (props.location.state.filterLink == '🦄') {
           return true
         } else {
           return props.location.state.filterLink == edge.node.frontmatter.type
@@ -25,7 +25,7 @@ const IndexPage = (props) => {
   });
 
   if (props.location.state == null) {
-    props.location.state = { filterLink: "unicorn" }
+    props.location.state = { filterLink: "🦄" }
   }
 
   return (
@@ -38,7 +38,7 @@ const IndexPage = (props) => {
               <div class="selector-container">
                 I am a: &nbsp;
                 <BlogFilter
-                  value={'unicorn'}
+                  value={'🦄'}
                   filterLink={props.location.state.filterLink}
                 />
 
@@ -63,6 +63,7 @@ const IndexPage = (props) => {
                 />
               </div>
 
+              <TransitionGroup className="link-list">
               {edges.map(link => {
 
                 let label = <span class="post-type">{link.node.frontmatter.label}</span>;
@@ -75,22 +76,25 @@ const IndexPage = (props) => {
                 }
 
                 return (
-                  <div className={"post-container"}>
+                  <CSSTransition in={animation} timeout={700} classNames="animation">
+                    <div className={"post-container"}>
 
-                    {label}
+                      {label}
 
-                    <span class="post-meta">{link.node.frontmatter.date}</span>
+                      <span class="post-meta">{link.node.frontmatter.date}</span>
 
-                    <h2 class="post-title">
-                      {anchor}
-                    </h2>
+                      <h2 class="post-title">
+                        {anchor}
+                      </h2>
 
-                    <span class="post-description"><i>{link.node.frontmatter.desc} </i></span>
-                  </div>
+                      <span class="post-description"><i>{link.node.frontmatter.desc} </i></span>
+                    </div>
+                  </CSSTransition>
                 )
               }
 
               )}
+              </TransitionGroup>
             </div>
           </div>
         </div>

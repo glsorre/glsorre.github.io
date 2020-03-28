@@ -9,9 +9,10 @@ const Header = ({ location }) => {
         <div class="unit whole">
           <div class="intro">
             <Link to="/"
-                  state={{ filterLink: 'unicorn' }}>
+                  state={{ filterLink: '🦄' }}>
               <img class="sticker" alt="Hello, my name is Giuseppe Sorrentino and right|right is my personal brand." src="headerSticker_001.svg"/>
             </Link>
+            <p>My professional objective is <b>to avoid failure of digital products</b> by thinking/managing them <b>right</b> (using ux and agile) and developing them <b>right</b>.</p>
           </div>
         </div>
 
