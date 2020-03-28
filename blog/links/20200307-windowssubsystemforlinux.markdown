@@ -1,5 +1,5 @@
 ---
-title: "windows Subsystem for linux: never prompt your ssh passphrase again"
+title: "windows subsystem for linux: never prompt your ssh passphrase again"
 type: "developer"
 label: "post"
 anchor: "https://medium.com/@glsorre/windows-subsystem-for-linux-never-prompt-your-ssh-passphrase-again-353db7c931ab"

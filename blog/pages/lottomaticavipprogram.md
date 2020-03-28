@@ -1,6 +1,6 @@
 ---
 title: "lottomatica vip program"
-path: "/userzoomhelpandsupportarea"
+path: "/lottomaticavipprogram"
 ---
 <div class="project-container">
     <span class="post-type">WIREFRAMES</span>
