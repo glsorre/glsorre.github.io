@@ -31,7 +31,7 @@ const IndexPage = (props) => {
   return (
     <Layout location={props.location}>
       <SEO title="Home" keywords={[`home`, `rightright`, `giuseppe sorrentino`]} />
-      <CSSTransition in={animation} timeout={700} classNames="animation" unmountOnExit>
+      <CSSTransition in={animation} timeout={700} classNames="animation">
         <div>
           <div class="home grid">
             <div class="unit whole">
