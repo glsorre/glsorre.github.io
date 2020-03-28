@@ -19,8 +19,11 @@ const IndexPage = (props) => {
         <div>
           <div class="home grid">
             <div class="unit whole">
-              <h2 id="welcome">Welcome!</h2>
-              <p>I am <b>Giuseppe Sorrentino</b> and this is my personal digital playground.</p>
+              <div class="intro">
+                <p>I am a professional with a long experience in <b>ux design/research</b> and <b>software development</b>. I am an <b>agile enthusiast</b> too.</p>
+
+                <p>fsd sdMy professional objective is to <b>avoid failure of digital products</b> by thinking/managing them <b>right</b> (using ux and agile) and developing them <b>right</b>.</p>
+              </div>
             </div>
           </div>
           <div class="home grid">

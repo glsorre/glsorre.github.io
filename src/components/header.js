@@ -15,7 +15,7 @@ const Header = ({ siteTitle, menu, location }) => {
     <header class="header">
       <div class="grid">
 
-        <div class="unit golden-small">
+        <div class="unit whole">
           <h1 class="logo">
             <Link
               to="/"
@@ -25,7 +25,7 @@ const Header = ({ siteTitle, menu, location }) => {
           </h1>
         </div>
 
-        <div class="unit golden-big">
+        {/* <div class="unit golden-big">
           <TransitionGroup class="nav">
             {menuAn
             .filter(item => {
@@ -52,7 +52,7 @@ const Header = ({ siteTitle, menu, location }) => {
               </CSSTransition>
             ))}
           </TransitionGroup>
-        </div>
+        </div> */}
 
       </div>
 

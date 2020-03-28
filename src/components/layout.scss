@@ -166,15 +166,16 @@ a {
 .logo {
 	text-indent: -9999px;
 	a {
+		margin: 0 auto; 
 		display: block;
 		width: 211px;
-  	height: 42px;
-  	background: url("./rightright_logo.svg") no-repeat 0px 0px;
-  	background-size: 211px 95px;
+		height: 42px;
+		background: url("./rightright_logo.svg") no-repeat 0px 0px;
+		background-size: 211px 95px;
 
 		&:hover {
 			background: url("rightright_logo.svg") no-repeat 0px -52px;
-    	background-size: 211px 95px;
+    		background-size: 211px 95px;
 		}
 	}
 }
@@ -199,12 +200,6 @@ a {
       border-bottom: 1px solid darken($brand-color, 15%);
     }
 	}
-}
-
-#welcome {
-	font-size: 38.5px;
-	font-weight: 300;
-	color: $text-color;
 }
 
 .intro-title {
