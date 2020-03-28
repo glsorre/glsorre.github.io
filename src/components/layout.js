@@ -9,35 +9,17 @@ import "typeface-source-sans-pro"
 
 const Layout = ({ location, children }) => {
   return (
-  <StaticQuery
-    query={graphql`
-    query {
-        site {
-          siteMetadata {
-            title
-            menu {
-              label
-              path
-            }
-          }
-        }
-      }
-    `}
-    render={(data) => (
-      <>
-        <div class="container">
-          <Header siteTitle={data.site.siteMetadata.title}
-                  menu={data.site.siteMetadata.menu}
-                  location={location} />
-        
-          {children}
+    <main>
+      <Header location={location} />
+      <div class="container">
+      
+        {children}
 
-        </div>
-        <Footer />
-      </>
-    )}
-  />
-)}
+      </div>
+      <Footer />
+    </main>
+    )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,

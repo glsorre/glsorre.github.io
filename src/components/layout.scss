@@ -124,22 +124,9 @@ body {
 	}
 }
 
-#___gatsby {
-	flex: 1;
-	width: 100%;
-	min-height: 100%;
-
-	
-}
-
-#___gatsby > div {
-	min-height: 100%;
-}
-
 .container {
-  flex: 1;
 	width: 100%;
-	min-height: calc(100vh - 83px);
+	margin-bottom: 100px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -180,6 +167,15 @@ a {
 	}
 }
 
+.intro {
+	margin: 30px 0;
+	text-align: center;
+
+	.sticker {
+		transform: rotate(-5deg);
+	}
+}
+
 .description {
 	font: 21px/28px "Source Sans Pro", sans-serif;
 	b {
@@ -210,15 +206,20 @@ a {
 }
 
 .post-type {
-  display: inline-block;
-  text-align: center;
-  padding: 0 5px;
-  font-weight: bold;
-  border-left: 3px solid $text-color;
+	text-transform: uppercase;
+	display: inline-block;
+	text-align: center;
+	padding: 0 5px;
+	font-weight: bold;
+	border-left: 3px solid $text-color;
 }
 
 .post-container, .post-header {
 	padding: 28px 0;
+
+	.selector-container {
+		text-align: center;
+	}
 }
 
 .hidden {
@@ -232,6 +233,8 @@ a.filter-anchor {
 	text-decoration: none;
 	border: 1px solid $text-color;
 	color: $text-color;
+	display: inline-block;
+	margin-bottom: 10px;
 
 	&:hover {
 		color: $brand-color;
@@ -278,12 +281,16 @@ a.filter-anchor.active {
 }
 
 .footer {
-  background: $text-color;
-  color: $background-color;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	background: $text-color;
+	color: $background-color;
 	margin-top: 36px;
 
-  .author-copyright {
-    font-size: 12px;
+	.author-copyright {
+		font-size: 12px;
 		line-height: 22px;
 	}
 	

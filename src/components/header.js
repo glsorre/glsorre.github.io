@@ -1,58 +1,19 @@
+import React from "react"
 import { Link } from "gatsby"
-import React, { useState, useEffect } from "react"
-import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
-import "./rightright_logo.svg"
-
-const Header = ({ siteTitle, menu, location }) => {
-  const [menuAn, setMenuAn] = useState([])
-
-  useEffect(() => {
-    setMenuAn(menu)
-  })
-
+const Header = ({ location }) => {
   return (
     <header class="header">
       <div class="grid">
 
         <div class="unit whole">
-          <h1 class="logo">
-            <Link
-              to="/"
-            >
-              {siteTitle}
+          <div class="intro">
+            <Link to="/"
+                  state={{ filterLink: 'unicorn' }}>
+              <img class="sticker" alt="Hello, my name is Giuseppe Sorrentino and right|right is my personal brand." src="headerSticker_001.svg" width="200" height="150" />
             </Link>
-          </h1>
+          </div>
         </div>
-
-        {/* <div class="unit golden-big">
-          <TransitionGroup class="nav">
-            {menuAn
-            .filter(item => {
-              if ( location == null) {
-                return true
-              } else {
-                return item.path != location.pathname
-              }
-            })
-            .map(item => (
-              <CSSTransition
-                  key={item.id}
-                  timeout={700}
-                  classNames="animation"
-                  mountOnEnter
-                >
-                <Link
-                  to={item.path}
-                  className="nav-link"
-                  state={{ filterLink: "all" }}
-                >
-                  {item.label}
-                </Link>
-              </CSSTransition>
-            ))}
-          </TransitionGroup>
-        </div> */}
 
       </div>
 
