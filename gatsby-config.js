@@ -3,24 +3,7 @@ module.exports = {
     title: "right right",
     author: "@glsorre",
     description: "i am giuseppe sorrentino and this is my personal digital playground",
-    siteUrl: "https://rightrght.me",
-    menu: [
-      {
-        id: 1,
-        label: 'blog',
-        path: '/blog'
-      },
-      { 
-        id: 2,
-        label: 'portfolio',
-        path: '/portfolio'
-      },
-      { 
-        id: 3,
-        label: 'about me',
-        path: '/aboutme'
-      },
-    ],
+    siteUrl: "https://rightrght.me"
   },
   plugins: [
     "gatsby-plugin-react-helmet",
