@@ -22,7 +22,6 @@ export default function HTML(props) {
         />
         {props.postBodyComponents}
       </body>
-      <script id="CookieDeclaration" src="https://consent.cookiebot.com/69be4656-4dae-48c5-adf2-8d8a1a5ae738/cd.js" type="text/javascript" async></script>
     </html>
   )
 }
