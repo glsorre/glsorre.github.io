@@ -1,0 +1,8 @@
+---
+title: "emerge!"
+type: "speaker"
+label: "slides"
+anchor: "https://docs.google.com/presentation/d/1rb6LJQiwCHG7tHZNSNcKfilyaEYBkJmrpb3YTqGoU8c/edit?usp=sharing"
+date: "2020-05-20T11:00:00+01:00"
+desc: "a talk about emergence in software development"
+---
