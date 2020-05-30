@@ -14,7 +14,8 @@ collections:
     folder: "blog/links"
     create: true
     extension: "markdown"
-    slug: "{{year}}{{month}}{{day}}-{{title.slug}}"
+    slug: "{{year}}{{month}}{{day}}-{{slug}}"
+    preview_path: /
     editor:
       preview: false
     fields:
