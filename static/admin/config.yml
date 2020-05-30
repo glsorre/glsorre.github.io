@@ -2,7 +2,6 @@ backend:
   name: github
   repo: glsorre/glsorre.github.io
   branch: gatsby
-  base_url: https://rightright.me
 
 media_folder: static/img
 public_folder: /img
