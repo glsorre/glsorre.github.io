@@ -1,0 +1,57 @@
+backend:
+  name: github
+  repo: glsorre/glsorre.github.io
+  branch: gatsby
+
+media_folder: static/img
+public_folder: /img
+
+publish_mode: editorial_workflow
+
+collections:
+  - name: "link"
+    label: "Link"
+    folder: "blog/links"
+    create: true
+    extension: "markdown"
+    slug: "{{year}}{{month}}{{day}}-{{slug}}"
+    preview_path: /
+    editor:
+      preview: false
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Type"
+        name: "type"
+        widget: "select"
+        options: ["writer", "speaker", "developer", "designer"]
+      - label: "Label"
+        name: "label"
+        widget: "string"
+      - label: "anchor"
+        name: "anchor"
+        widget: "string"
+      - label: "Date"
+        name: "date"
+        widget: "datetime"
+      - label: "Description"
+        name: "desc"
+        widget: "string"
+  - name: "page"
+    label: "Page"
+    folder: "blog/pages"
+    create: true
+    slug: "{{slug}}"
+    editor:
+      preview: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Path"
+        name: "path"
+        widget: "string"
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
