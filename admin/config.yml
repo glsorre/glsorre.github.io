@@ -8,6 +8,8 @@ backend:
 media_folder: static/img
 public_folder: /img
 
+site_url: https://rightright.me
+
 publish_mode: editorial_workflow
 
 collections:
