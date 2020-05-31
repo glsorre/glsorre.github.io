@@ -3,7 +3,6 @@ backend:
   repo: glsorre/glsorre.github.io
   branch: gatsby
   base_url: https://i7xyv0wke1.execute-api.eu-west-1.amazonaws.com/api
-  auth: /auth
 
 media_folder: static/img
 public_folder: /img
