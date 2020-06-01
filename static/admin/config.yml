@@ -3,10 +3,14 @@ backend:
   repo: glsorre/glsorre.github.io
   branch: gatsby
   base_url: https://i7xyv0wke1.execute-api.eu-west-1.amazonaws.com
-  auth: api/auth
+  auth_endpoint: /api/auth
+  site_domain: www.rightright.me
 
 media_folder: static/img
 public_folder: /img
+
+site_id: www.rightright.me
+site_url: https://www.rightright.me
 
 publish_mode: editorial_workflow
 
