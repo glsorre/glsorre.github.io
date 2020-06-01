@@ -49,6 +49,7 @@ collections:
     folder: "blog/pages"
     create: true
     slug: "{{slug}}"
+    preview_path: /{{slug}}
     editor:
       preview: true
     fields:
