@@ -33,10 +33,11 @@ jobs:
     - name: add preview status
       uses: Sibz/github-status-action@v1
       with:
-        authToken: ${{secrets.GITHUB_TOKEN}}
+        authToken: ${{ secrets.GITHUB_TOKEN }}
         state: success
         context: preview_path
-        description: ${{ secrets.AWS_PREVIEW_URL }}/${{ github.event.pull_request.head.sha }}
+        target_url: ${{ secrets.AWS_PREVIEW_URL }}/${{ github.event.pull_request.head.sha }}
+        sha: ${{ github.event.pull_request.head.sha }}
 
     
 
