@@ -12,10 +12,13 @@ jobs:
     - name: checkout
       uses: actions/checkout@v2
 
+    - name: configure prefix
+      run: sed -i 's/tochange/${{ github.event.pull_request.head.sha }}/g' gatsby-config.js
+           
     - name: build gatsby
       uses: jzweifel/gatsby-cli-github-action@master
       with:
-        gatsby-arg: build
+        gatsby-arg: build --prefix-paths
 
     - name: configure aws credentials
       uses: aws-actions/configure-aws-credentials@v1

@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/tochange",
   siteMetadata: {
     title: "right right",
     author: "@glsorre",
