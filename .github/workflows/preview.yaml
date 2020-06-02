@@ -25,7 +25,7 @@ jobs:
         aws-region: ${{ secrets.AWS_REGION }}
 
     - name: copy preview
-      run: aws s3 cp --recursive public s3://${{ secrets.AWS_BUCKET }}/${{ github.event.pull_request.head.sha }}}/
+      run: aws s3 cp --recursive public s3://${{ secrets.AWS_BUCKET }}/${{ github.event.pull_request.head.sha }}/
 
     - name: add preview status
       uses: ouzi-dev/commit-status-updater@v1.0.4
