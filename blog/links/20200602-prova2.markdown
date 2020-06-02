@@ -1,0 +1,8 @@
+---
+title: prova2
+type: developer
+label: dadadas
+anchor: http://fsdfsd.vom
+date: 2020-06-02T12:54:00.513Z
+desc: prova2
+---
