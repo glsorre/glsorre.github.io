@@ -1,0 +1,8 @@
+---
+title: prova
+type: writer
+label: prova
+anchor: http://prova.com
+date: 2020-06-02T15:37:16.706Z
+desc: prova
+---
