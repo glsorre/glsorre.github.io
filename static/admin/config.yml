@@ -8,7 +8,7 @@ backend:
   preview_context: preview_path
 
 media_folder: static/img
-public_folder: /img
+public_folder: img
 
 site_id: rightright.me
 site_url: https://rightright.me
