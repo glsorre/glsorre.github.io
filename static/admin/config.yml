@@ -49,7 +49,7 @@ collections:
     label: "Page"
     folder: "blog/pages"
     create: true
-    slug: "/{{slug}}"
+    slug: "{{slug}}"
     editor:
       preview: true
     fields:
