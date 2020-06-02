@@ -31,11 +31,12 @@ jobs:
       run: aws s3 cp --recursive public s3://${{ secrets.AWS_BUCKET }}/${{ github.event.pull_request.head.sha }}/
 
     - name: add preview status
-      uses: ouzi-dev/commit-status-updater@v1.0.4
+      uses: Sibz/github-status-action@v1
       with:
-        name: preview_path
-        status: success
-        url: ${{ secrets.AWS_PREVIEW_URL }}/${{ github.event.pull_request.head.sha }}
+        authToken: ${{secrets.GITHUB_TOKEN}}
+        state: success
+        context: preview_path
+        description: ${{ secrets.AWS_PREVIEW_URL }}/${{ github.event.pull_request.head.sha }}
 
     
 
