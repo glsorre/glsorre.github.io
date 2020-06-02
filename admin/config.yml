@@ -4,13 +4,14 @@ backend:
   branch: gatsby
   base_url: https://i7xyv0wke1.execute-api.eu-west-1.amazonaws.com
   auth_endpoint: /api/auth
-  site_domain: www.rightright.me
+  site_domain: rightright.me
+  preview_context: preview_path
 
 media_folder: static/img
 public_folder: /img
 
-site_id: www.rightright.me
-site_url: https://www.rightright.me
+site_id: rightright.me
+site_url: https://rightright.me
 
 publish_mode: editorial_workflow
 
