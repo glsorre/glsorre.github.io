@@ -1,27 +1,51 @@
 import React from "react"
-import { Link } from "gatsby"
+import { StaticQuery, Link, graphql } from "gatsby"
 
 import sticker from "../../static/headerSticker_001.svg"
 
 const Header = ({ location }) => {
   return (
-    <header class="header">
-      <div class="grid">
+    <StaticQuery
+      query={headerQuery}
+      render={ data => {
+        return (
+          <header class="header">
+            <div class="grid">
 
-        <div class="unit whole">
-          <div class="intro">
-            <Link to="/"
-                  state={{ filterLink: '🦄' }}>
-              <img class="sticker" alt="Hello, my name is Giuseppe Sorrentino and right|right is my personal brand." src={sticker}/>
-            </Link>
-            <p>My professional objective is <b>to avoid failure of digital products</b> by thinking/managing them <b>right</b> (using ux and agile) and developing them <b>right</b>.</p>
-          </div>
-        </div>
+              <div class="unit whole">
+                <div class="intro">
+                  <Link to="/"
+                        state={{ filterLink: '🦄' }}>
+                    <img class="sticker" alt={data.allMarkdownRemark.edges[0].node.frontmatter.alternative_text} src={sticker}/>
+                  </Link>
+                  <div dangerouslySetInnerHTML={{__html: data.allMarkdownRemark.edges[0].node.html}}></div>
+                </div>
+              </div>
 
-      </div>
+            </div>
 
-    </header>
+          </header>
+        )}
+      }
+    />
   )
 }
 
 export default Header
+
+export const headerQuery = graphql`
+  query HeaderQuery {
+    allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/hf.md$/"}}) {
+      edges {
+        node {
+          id
+          frontmatter {
+            mail
+            alternative_text
+          }
+          html
+        }
+      }
+    }
+  }
+`

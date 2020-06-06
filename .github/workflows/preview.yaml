@@ -9,6 +9,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: add pending status
+      uses: Sibz/github-status-action@v1
+      with:
+        authToken: ${{ secrets.GITHUB_TOKEN }}
+        state: pending
+        context: preview_path
+        sha: ${{ github.event.pull_request.head.sha }}
+
     - name: checkout
       uses: actions/checkout@v2
 

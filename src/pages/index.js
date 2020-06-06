@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { OutboundLink } from 'gatsby-plugin-google-analytics'
 import { CSSTransition, TransitionGroup } from "react-transition-group"
+import { graphql } from 'gatsby'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"

@@ -63,3 +63,19 @@ collections:
       - label: "Body"
         name: "body"
         widget: "markdown"
+  - label: Site
+    name: site
+    files:
+      - label: Header & Footer
+        name: hf
+        file: blog/settings/hf.md
+        fields:
+          - label: Footer Mail
+            name: mail
+            widget: string
+          - label: Logo Alternative Text
+            name: alternative_text
+            widget: string
+          - label: Header Subtitle
+            name: body
+            widget: markdown
