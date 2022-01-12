@@ -1,0 +1,8 @@
+---
+title: prova
+type: speaker
+label: design
+anchor: https://example.com
+date: 2022-01-12T20:07:43.042Z
+desc: questa è una descrizione
+---
