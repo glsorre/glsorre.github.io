@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 886 139.38"
+   version="1.1"
+   id="svg102"
+   sodipodi:docname="riquadro pulsante pieno.svg"
+   inkscape:version="1.2.2 (b0a84865, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs106" />
+  <sodipodi:namedview
+     id="namedview104"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="1.3645598"
+     inkscape:cx="443.36642"
+     inkscape:cy="69.985939"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg102" />
+  <path
+     id="polygon92"
+     d="M 9.9609375 0 L 9.9609375 9.9609375 L 4.6464844 9.9609375 L 0 9.9609375 L 0 19.910156 L 0 99.560547 L 0 109.50977 L 0 119.4707 L 0 129.41992 L 4.6464844 129.41992 L 9.9609375 129.41992 L 9.9609375 139.38086 L 19.970703 139.38086 L 29.980469 139.38086 L 39.990234 139.38086 L 845.94922 139.38086 L 855.96094 139.38086 L 865.98047 139.38086 L 875.99023 139.38086 L 875.99023 129.41992 L 886 129.41992 L 886 119.4707 L 886 109.50977 L 886 99.560547 L 886 19.910156 L 886 9.9609375 L 875.99023 9.9609375 L 875.99023 0 L 865.98047 0 L 855.96094 0 L 845.94922 0 L 39.990234 0 L 29.980469 0 L 19.970703 0 L 9.9609375 0 z " />
+</svg>

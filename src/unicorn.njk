@@ -1,0 +1,105 @@
+---
+layout: layout.njk
+title: Giuseppe Sorrentino - Unicorn - Right Right
+---
+
+<script>
+  document.addEventListener('alpine:init', () => {
+        Alpine.data('unicorn', () => ({
+            links: {{ links | reverse | jsonify | safe }},
+            filteredLinks: {{ links | reverse | jsonify | safe }},
+            typed: null,
+            init () {
+              document.getElementById('typed').innerText = ''
+
+              this.$watch('hash', (value) => {
+                this.filteredLinks = []
+                setTimeout(() => {
+                  const slug = window.location.hash.replace('#', '')
+                  if (slug === '') {
+                    this.filteredLinks = this.links
+                    this.typed = new window.Typed('#typed', {
+                      strings: ['unicorn'],
+                      autoStart: true,
+                      showCursor: false,
+                      typeSpeed: 100,
+                    })
+                    this.showMenu = false
+                    return
+                  }
+                  this.filteredLinks = this.links.filter(item => item.tags === slug)
+                  this.typed = new window.Typed('#typed', {
+                    strings: [slug],
+                    autoStart: true,
+                    showCursor: false,
+                    typeSpeed: 100,
+                  })
+                  this.showMenu = false
+                }, 200)
+              })
+            },
+            effect () {
+              if (window.location.hash) {
+                const slug = window.location.hash.replace('#', '')
+                this.filteredLinks = this.links.filter(item => item.tags === slug)
+              } else {
+                window.location.hash = "#"
+              }
+            },
+            toggleFilter (event, slug) {
+              event.preventDefault()
+              if (`#${slug}` === this.hash) {
+                window.location.hash = ""
+                return
+              }
+              this.filteredLinks = this.links.filter(item => item.tags === slug)
+              window.location.hash = `#${slug}`
+              this.lastHash = this.hash
+            },
+            titleEffect () {
+              this.typed = new window.Typed('#typed', {
+                strings: [window.location.hash.replace('#', '') || 'unicorn'],
+                autoStart: true,
+                showCursor: false,
+                typeSpeed: 100,
+              })
+            }
+        }))
+    })
+</script>
+
+<div class="container" x-data="unicorn" x-effect="effect">
+  <ul class="content">
+    <li class="content_item">
+      <h1 class="content_item__title__rr" x-effect="titleEffect">i'm a <span id="typed">unicorn</span></h1>
+      <div class="links">
+        <div :class="hash === '#writer' ? 'link_item active' : 'link_item'">
+          <a class="link_item__anchor" @click="toggleFilter($event, 'writer')" href="/unicorn/#writer">writer</a>
+        </div>
+        <div :class="hash === '#speaker' ? 'link_item active' : 'link_item'">
+          <a class="link_item__anchor" @click="toggleFilter($event, 'speaker')" href="/unicorn/#speaker">speaker</a>
+        </div>
+        <div :class="hash === '#developer' ? 'link_item active' : 'link_item'">
+          <a class="link_item__anchor" @click="toggleFilter($event, 'developer')" href="/unicorn/#developer">developer</a>
+        </div>
+        <div :class="hash === '#designer' ? 'link_item active' : 'link_item'">
+          <a class="link_item__anchor" @click="toggleFilter($event, 'designer')" href="/unicorn/#designer">designer</a>
+        </div>
+      </div>
+    </li>
+  </ul>
+  <ul class="roles_content" x-show="filteredLinks.length" x-transition x-transition:enter.duration.200ms x-transition:leave.duration.0ms>
+    <template x-for="link in filteredLinks">
+      <li class="roles_content__item">
+        <div class="roles_content__info__container">
+            <span class="roles_content__info__label" x-text="link.label"></span>
+            <span class="roles_content__info__date" x-text="window.dayjs(link.date).format('MMMM YYYY')"></span>
+        </div>
+        <h2 class="roles_content__item__title">
+          <a :href="link.anchor" x-text="link.title"></a>
+        </h2>
+        <div class="roles_content__item__description" x-text="link.desc"></div>
+      </li>
+    </template>
+  </ul>
+<div>

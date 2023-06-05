@@ -1,0 +1,34 @@
+---
+pagination:
+    data: projects
+    size: 1
+    alias: project
+permalink: "projects/{{ project.title | slugify }}/"
+
+layout: layout.njk
+---
+
+<div class="container">
+  <ul class="content">
+    <li class="content_item">
+      <h1 class="content_item__title__rr">i'm a {{ project.tags }}</h1>
+    </li>
+  </ul>
+  <div class="project_content">
+    <div class="project_content__item">
+      <div class="project_content__info__container__project">
+        <span class="project_content__info__label">{{ project.label }}</span>
+        <span class="project_content__info__date">{{ projct.date }}</span>
+      </div>
+      <h1 class="project_content__item__title">
+        {{ project.title }}
+      </h1>
+      <div class="project_content__item__description">{{ project.desc | safe }}</div>
+      {% for image in project.images %}
+        <div class="project_content__item__image">
+          <img src="{{ image }}" alt="{{ project.title }}" />
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

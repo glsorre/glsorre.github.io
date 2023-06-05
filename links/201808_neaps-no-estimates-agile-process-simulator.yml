@@ -1,0 +1,8 @@
+title: 'neaps: no-estimates agile process simulator'
+tags: developer
+label: project
+anchor: https://github.com/HotelsDotCom/neaps
+date: 2018-08
+desc: >-
+  a simulator to forecast the end of agile project basing on historical data and
+  using montecarlo simulations

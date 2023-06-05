@@ -1,0 +1,35 @@
+{
+  "name": "glsorre.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:glsorre/glsorre.github.io.git",
+  "author": "Giuseppe Sorrentino <uhpnou@gmail.com>",
+  "license": "",
+  "private": true,
+  "dependencies": {
+    "@tinacms/cli": "^1.5.16",
+    "alpinejs": "^3.12.2",
+    "dayjs": "^1.11.8",
+    "tinacms": "^1.5.8",
+    "typed.js": "^2.0.16",
+    "typewriter-effect": "^2.20.1"
+  },
+  "devDependencies": {
+    "@11ty/eleventy-plugin-vite": "^4.0.0",
+    "autoprefixer": "^10.4.14",
+    "gh-pages": "^5.0.0",
+    "glob": "^10.2.6",
+    "js-yaml": "^4.1.0",
+    "luxon": "^3.3.0",
+    "marked": "^5.0.5",
+    "postcss-nested": "^6.0.1",
+    "vite": "^4.3.9"
+  },
+  "scripts": {
+    "serve": "npx tinacms dev -c 'npx @11ty/eleventy --serve'",
+    "build:11ty": "rm -rf docs && npx @11ty/eleventy",
+    "build:tinacms": "npx tinacms build",
+    "build": "npm run build:11ty && npm run build:tinacms",
+    "deploy": "gh-pages -d docs"
+  }
+}

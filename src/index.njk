@@ -1,0 +1,63 @@
+---
+layout: layout.njk
+title: Giuseppe Sorrentino - Right Right
+---
+
+<script>
+  document.addEventListener('alpine:init', () => {
+        Alpine.data('index', () => ({
+            show: 0,
+            intros: {{ intros | jsonify | safe }},
+            init () {
+              this.$watch('hash', (value) => {
+                setTimeout(() => {
+                  const slug = window.location.hash.replace('#', '')
+                  const index = this.intros.findIndex(item => item.slug === slug)
+                  if (index > -1) {
+                    this.show = index
+                  }
+                  this.showMenu = false
+                }, 200)
+              })
+            },
+            effect () {
+              console.log(this.intros)
+
+              if (window.location.hash) {
+                const slug = window.location.hash.replace('#', '')
+                const index = this.intros.findIndex(item => item.slug === slug)
+                if (index > -1) {
+                  this.show = index
+                }
+              } else {
+                window.location.hash = this.intros[0].slug
+              }
+            },
+            handleNext(e) {
+              window.scrollTo(0, 0);
+              if (this.show === this.intros.length - 1) {
+                window.location = '/unicorn/'
+                return
+              }
+              this.show = (this.show + 1) % {{ intros | length }}
+              window.location.hash = this.intros[this.show].slug
+            },
+            handlePrev(e) {
+              this.show = (this.show - 1) % {{ intros | length }}
+              window.location.hash = this.intros[this.show].slug
+            }
+        }))
+    })
+</script>
+
+<ul class="content" x-data="index" x-effect="effect">
+  {%- for item in intros %}
+    <li id="{{ item.title | slugify }}" class="content_item" x-show="show === {{ loop.index0 }}" x-transition x-transition:enter.duration.200ms x-transition:leave.duration.0ms>
+      <h1 class="content_item__title">
+        {{ item.title }}
+      </h1>
+      <div class="content_item__content">{{ item.content | safe }}</div>
+    </li>
+  {% endfor -%}
+  <button class="content__next_m" x-show="show < intros.length" @click="handleNext" x-transition>next</button>
+</ul>
