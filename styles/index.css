@@ -608,9 +608,8 @@ button:focus {
   & p:has(img) {
     margin: 2rem 0 2rem -2.5rem;
     position: relative;
-    text-align: center;
-    max-width: 1170px;
     padding: .25rem;
+    text-align: center;
 
     &:after,
     &:before {
@@ -637,5 +636,12 @@ button:focus {
       border-top: none;
       border-bottom: none;
     }
+  }
+
+  & p img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
   }
 }
