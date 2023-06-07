@@ -6,6 +6,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyVitePlugin);
   eleventyConfig.addPassthroughCopy("scripts")
   eleventyConfig.addPassthroughCopy("styles")
+  eleventyConfig.addPassthroughCopy("public/assets")
   eleventyConfig.addDataExtension("yml", contents => yaml.load(contents))
   eleventyConfig.addFilter("date", (date, format = 'DDD') => {
     return DateTime.fromISO(date, { zone: "Europe/Rome", locale: "en" }).toFormat(format);

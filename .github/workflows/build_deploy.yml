@@ -17,16 +17,36 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
-        cache: 'yarn'
+          cache: 'yarn'
 
       - name: Install dependecies
         run: yarn install
 
       - name: Build static site
         env:
+          HEAD: 11ty
           TINA_CLIENTID: ${{ secrets.TINA_CLIENTID }}
-          TINA_TOKEN: ${{ secrets.TINA_TOKEN }
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
         run: yarn run build
+
+      - name: Archive artifact
+        shell: sh
+        run: |
+          tar \
+            --dereference --hard-dereference \
+            --directory _site/ \
+            -cvf "$RUNNER_TEMP/artifact.tar" \
+            --exclude=.git \
+            --exclude=.github \
+            . \
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: github-pages
+          path: ${{ runner.temp }}/artifact.tar
+          retention-days: 1
+          if-no-files-found: error
         
   deploy:
     needs: build

@@ -17,7 +17,6 @@
   "devDependencies": {
     "@11ty/eleventy-plugin-vite": "^4.0.0",
     "autoprefixer": "^10.4.14",
-    "gh-pages": "^5.0.0",
     "glob": "^10.2.6",
     "js-yaml": "^4.1.0",
     "luxon": "^3.3.0",
@@ -27,9 +26,8 @@
   },
   "scripts": {
     "serve": "npx tinacms dev -c 'npx @11ty/eleventy --serve'",
-    "build:11ty": "rm -rf docs && npx @11ty/eleventy",
+    "build:11ty": "npx @11ty/eleventy",
     "build:tinacms": "npx tinacms build",
-    "build": "npm run build:11ty && npm run build:tinacms",
-    "deploy": "gh-pages -d docs"
+    "build": "npm run build:11ty && npm run build:tinacms"
   }
 }
