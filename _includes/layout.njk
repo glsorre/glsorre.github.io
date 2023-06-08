@@ -35,7 +35,7 @@
   </head>
   <body x-data="layout">
     <nav class="nav">
-      <button class="nav__hamburger" @click="toggleMenu">hamburger menu</button>
+      <button class="nav__hamburger" :class="showMenu && 'open'" @click="toggleMenu">hamburger menu</button>
       <div class="nav__overlay" 
         x-show="showMenu" 
         x-transition

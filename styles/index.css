@@ -121,6 +121,11 @@ button:focus {
     border-radius: 0;
     transition: all .3s ease-in-out;
 
+    &.open {
+      -webkit-mask: url("/assets/svg/croce nera.svg") no-repeat center center !important;
+      mask: url("/assets/svg/menu button.svg") no-repeat center center !important;
+    }
+
     &:hover {
       background-color: #95c389;
     }

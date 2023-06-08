@@ -21,8 +21,6 @@ title: Giuseppe Sorrentino - Right Right
               })
             },
             effect () {
-              console.log(this.intros)
-
               if (window.location.hash) {
                 const slug = window.location.hash.replace('#', '')
                 const index = this.intros.findIndex(item => item.slug === slug)
