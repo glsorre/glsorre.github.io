@@ -37,6 +37,19 @@ title: Giuseppe Sorrentino - Unicorn - Right Right
                   this.showMenu = false
                 }, 200)
               })
+
+              this.$watch('showDisclaimer', (value) => {
+                if (!value) {
+                  document.getElementById('typed').innerText = ''
+                  const slug = window.location.hash.replace('#', '')
+                  this.typed = new window.Typed('#typed', {
+                    strings: [slug || 'unicorn'],
+                    autoStart: true,
+                    showCursor: false,
+                    typeSpeed: 100,
+                  })
+                }
+              })
             },
             effect () {
               if (window.location.hash) {

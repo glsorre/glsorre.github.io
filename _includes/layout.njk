@@ -4,6 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1PL6XRNLB6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-1PL6XRNLB6');
+    </script>
     <script src="/scripts/index.js" type="module"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,28 +20,51 @@
 
     <script>
       document.addEventListener('alpine:init', () => {
-            Alpine.data('layout', () => ({
-                showMenu: false,
-                hash: window.location.hash,
-                init () {
-                  window.addEventListener('hashchange', (e) => {
-                    this.hash = window.location.hash
-                  })
-                },
-                toggleMenu(e) {
-                  document.body.classList.toggle('overflow-hidden')
-                  this.showMenu = !this.showMenu
-                },
-                closeMenu(e) {
-                  document.body.classList.remove('overflow-hidden')
-                  this.showMenu = false
-                }
-            }))
-        })
-    </script>
+        Alpine.data('layout', () => ({
+          showMenu: false,
+          showDisclaimer: true,
+          hash: window.location.hash,
+          init () {
+            if (window.localStorage.getItem('disclaimer') === 'accepted') {
+              document.body.classList.remove('overflow-hidden')
+              this.showDisclaimer = false
+            }
+            window.addEventListener('hashchange', (e) => {
+              this.hash = window.location.hash
+            })
+            window.addEventListener('storage', (e) => {
+              if (window.localStorage.getItem("sampleList") !== 'accepted') {
+                document.body.classList.add('overflow-hidden')
+                this.showDisclaimer = true
+              };
+            })
+            this.$watch('showDisclaimer', (value) => {
+              if (value) {
+                window['ga-disable-GA_MEASUREMENT_ID'] = true;
+              } else {
+                window['ga-disable-GA_MEASUREMENT_ID'] = false;
+              }
+            })
+          },
+          acceptDisclaimer(e) {
+            document.body.classList.remove('overflow-hidden')
+            window.localStorage.setItem('disclaimer', 'accepted')
+            this.showDisclaimer = false
+          },
+          toggleMenu(e) {
+            document.body.classList.toggle('overflow-hidden')
+            this.showMenu = !this.showMenu
+          },
+          closeMenu(e) {
+            document.body.classList.remove('overflow-hidden')
+            this.showMenu = false
+          }
+      }))
+    })
+  </script>
 
   </head>
-  <body x-data="layout">
+  <body x-data="layout" class="overflow-hidden">
     <nav class="nav">
       <button class="nav__hamburger" :class="showMenu && 'open'" @click="toggleMenu">hamburger menu</button>
       <div class="nav__overlay" 
@@ -66,6 +97,26 @@
         </ul>
       </div>
     </nav>
+    <div class="disclaimer__overlay"
+      x-show="showDisclaimer" 
+      x-transition
+      x-transition:enter.duration.200ms
+      x-transition:leave.duration.200ms
+      >
+      <div class="disclaimer__content">
+        <h1 class="disclaimer__logo">right right</h1>
+        <p class="disclaimer__text">
+          Hello! My name is <b>Giuseppe</b> and <b>rightright.me</b> is my personal digital playground.
+        </p>
+        <p class="disclaimer__text">
+          I use cookies to <b>improve your experience and to understand how you interact with my website</b>.
+        </p>
+        <p class="disclaimer__text">
+          By continuing to use this site, <b>you accept rightright.me's use of cookies</b>.
+        </p>
+        <button class="disclaimer__cta" @click="acceptDisclaimer">Got it!</button>
+      </div>
+    </div>
     {{ content | safe }}
   </body>
 </html>
