@@ -2,18 +2,21 @@ order: 4
 title: my ideal tech stack
 slug: my-ideal-tech-stack
 content: >
-  1. Agile (SCRUM, Kanban)
+  1. **Agile** (SCRUM, Kanban)
 
-  2. HTML
+  2. **Versioning** (Git)
 
-  3. CSS (Less, SASS, PostCSS)
+  3. **HTML**
 
-  4. JS (React, Vue, SingleSPA, Alpine JS)
+  4. **CSS** (Less, SASS, PostCSS)
 
-  5. Python (Poetry, Django, Flask, Chalice, Scipy)
+  5. **JS** (React, Vue, SingleSPA, Alpine JS)
 
-  6. Linux and AWS (EC2, Lambda, Docker, CloudFormation, Terraform)
+  6. **Python** (Poetry, Django, Flask, Chalice, Scipy)
+
+  7. **CI/CD** (Jenkins, Github Actions, Gitlab CI/CD)
+
+  8. **Linux and AWS** (EC2, Lambda, Docker, CloudFormation, Terraform)
 
 
-  But I am proficient with many others technologies, ✉️ just ask at **giuseppe
-  \[at] rightright \[dot] me**
+  But I am proficient with many others technologies, like SwiftUI, Go and .NET, ✉️ just ask at **giuseppe \[at] rightright \[dot] me**
