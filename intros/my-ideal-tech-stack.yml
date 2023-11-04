@@ -14,9 +14,11 @@ content: >
 
   6. **Python** (Poetry, Django, Flask, Chalice, Scipy)
 
-  7. **CI/CD** (Jenkins, Github Actions, Gitlab CI/CD)
+  7. **Data Persistence** (Postgres, DynamoDB)
 
-  8. **Linux and AWS** (EC2, Lambda, Docker, CloudFormation, Terraform)
+  8. **CI/CD** (Jenkins, Github Actions, Gitlab CI/CD)
+
+  9. **Linux and AWS** (EC2, Lambda, Docker, CloudFormation, Terraform)
 
 
   But I am proficient with many others technologies, like SwiftUI, Go and .NET, ✉️ just ask at **giuseppe \[at] rightright \[dot] me**
