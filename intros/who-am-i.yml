@@ -1,4 +1,21 @@
 order: 1
 title: who am I?
 slug: who-am-i
-content: "\U0001F44B\n\nI'm a seasoned software developer with a decade of experience specializing in crafting innovative user interfaces.\n\nMy expertise lies in front-end development, where I excel in analyzing requirements and designing customized technical solutions using React, SingleSPA, Mobx, and other leading frameworks. I seamlessly integrate frontend and backend technologies to ensure optimal user experiences.\n\nMy journey began when I received my first Personal Computer, based on the 8086, at the age of 8. Despite spending half of my career in Design, UX, and Agile positions, I returned to my first love, coding.\n\nI proudly manage my personal brand, Right Right, where I create digital products by harmonizing design, management, and coding aspects\n"
+content: >
+  I'm a **seasoned software developer** with a decade of experience specializing
+  in crafting innovative user interfaces.
+
+
+  **My expertise lies in front-end development**, where I excel in analyzing
+  requirements and designing customized technical solutions using React,
+  SingleSPA, Mobx, and other leading frameworks. I seamlessly integrate frontend
+  and backend technologies to ensure optimal user experiences.
+
+
+  My journey began when I received my first Personal Computer, based on the
+  8086, at the age of 8. Despite spending half of my career in Design, UX, and
+  Agile positions, **I returned to my first love, coding**.
+
+
+  **I proudly manage my personal brand**, Right Right, where I create digital
+  products by harmonizing design, management, and coding aspects
