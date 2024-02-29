@@ -1,14 +1,4 @@
 order: 1
 title: who am I?
 slug: who-am-i
-content: >
-  I am a **t-shaped developer** with more than 5 years experience.
-  
-
-  I have received my first Personal Computer, based on 8086 in far 1990, I was 8. **From there I always coded**, even though I spent half of my career between Design, UX and Agile positions before coming back to my first love.
-
-
-  I am proficient in many different technologies even though I give my best on frontend development.
-
-
-  **Right Right is my personal brand**. It's a space where creating digital products taking into account design, management, and coding.
+content: "\U0001F44B\n\nI'm a seasoned software developer with a decade of experience specializing in crafting innovative user interfaces.\n\nMy expertise lies in front-end development, where I excel in analyzing requirements and designing customized technical solutions using React, SingleSPA, Mobx, and other leading frameworks. I seamlessly integrate frontend and backend technologies to ensure optimal user experiences.\n\nMy journey began when I received my first Personal Computer, based on the 8086, at the age of 8. Despite spending half of my career in Design, UX, and Agile positions, I returned to my first love, coding.\n\nI proudly manage my personal brand, Right Right, where I create digital products by harmonizing design, management, and coding aspects\n"
