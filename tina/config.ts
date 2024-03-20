@@ -18,6 +18,14 @@ export default defineConfig({
       publicFolder: "_site",
     },
   },
+  search: {
+    tina: {
+      indexerToken: 'a51d9c47a2e1bd46213807851c1b395381cd358a',
+      stopwordLanguages: ['eng'],
+    },
+    indexBatchSize: 100,
+    maxSearchIndexFieldLength: 100,
+  },
   schema: {
     collections: [
       {
