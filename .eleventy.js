@@ -1,8 +1,8 @@
-const { DateTime } = require("luxon")
-const yaml = require("js-yaml")
-const EleventyVitePlugin = require("@11ty/eleventy-plugin-vite")
+import { DateTime } from "luxon"
+import yaml from "js-yaml"
+import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
 
-module.exports = function (eleventyConfig) {
+export default async function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyVitePlugin);
   eleventyConfig.addPassthroughCopy("scripts")
   eleventyConfig.addPassthroughCopy("styles")

@@ -7,27 +7,28 @@
   "license": "",
   "private": true,
   "dependencies": {
-    "@tinacms/cli": "^1.5.16",
-    "alpinejs": "^3.12.2",
-    "dayjs": "^1.11.8",
-    "tinacms": "^1.5.8",
-    "typed.js": "^2.0.16",
-    "typewriter-effect": "^2.20.1"
+    "@11ty/eleventy": "^3.0.0",
+    "alpinejs": "^3.14.6",
+    "lodash": "^4.17.21",
+    "luxon": "^3.3.0",
+    "tinacms": "^2.5.0",
+    "typed.js": "^2.1.0"
   },
   "devDependencies": {
-    "@11ty/eleventy-plugin-vite": "^4.0.0",
+    "@tinacms/cli": "^1.6.12",
+    "@11ty/eleventy-plugin-vite": "^5.0.2",
     "autoprefixer": "^10.4.14",
     "glob": "^10.2.6",
     "js-yaml": "^4.1.0",
-    "luxon": "^3.3.0",
-    "marked": "^5.0.5",
+    "marked": "^15.0.3",
     "postcss-nested": "^6.0.1",
-    "vite": "^4.3.9"
+    "vite": "^6.0.0"
   },
   "scripts": {
     "serve": "npx tinacms dev -c 'npx @11ty/eleventy --serve'",
     "build:11ty": "npx @11ty/eleventy",
     "build:tinacms": "npx tinacms build",
     "build": "npm run build:11ty && npm run build:tinacms"
-  }
+  },
+  "type": "module"
 }

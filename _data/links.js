@@ -1,16 +1,16 @@
-const fs = require("fs")
-const { glob } = require("glob")
-const yaml = require("js-yaml")
-const dayjs = require('dayjs')
+import fs from "fs"
+import glob from "fast-glob"
+import yaml from "js-yaml"
+import { DateTime } from "luxon"
 
 async function parseYaml(filename) {
   let contents = fs.readFileSync(filename)
   contents = yaml.load(contents)
-  contents.date = dayjs(contents.date)
+  contents.date = DateTime.fromISO(contents.date)
   return contents
 }
 
-module.exports = async function() {
+export default async function() {
   const filenames = await glob('./links/*.yml')
   return await (await Promise.all(filenames.map(parseYaml))).sort((a, b) => a.date - b.date)
 };

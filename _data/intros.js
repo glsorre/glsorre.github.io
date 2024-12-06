@@ -1,7 +1,7 @@
-const fs = require("fs")
-const { glob } = require("glob")
-const yaml = require("js-yaml")
-const { marked } = require("marked")
+import fs from "fs"
+import glob from "fast-glob"
+import yaml from "js-yaml"
+import { marked } from "marked"
 
 async function parseYaml(filename) {
   let contents = fs.readFileSync(filename)
@@ -10,7 +10,7 @@ async function parseYaml(filename) {
   return contents
 }
 
-module.exports = async function() {
+export default async function() {
   const filenames = await glob('./intros/*.yml')
   return (await Promise.all(filenames.map(parseYaml))).sort((a, b) => a.order - b.order)
 };

@@ -106,7 +106,7 @@ title: Giuseppe Sorrentino - Unicorn - Right Right
       <li class="roles_content__item">
         <div class="roles_content__info__container">
             <span class="roles_content__info__label" x-text="link.label"></span>
-            <span class="roles_content__info__date" x-text="window.dayjs(link.date).format('MMMM YYYY')"></span>
+            <span class="roles_content__info__date" x-text="DateTime.fromISO(link.date).toFormat('MMMM yyyy')"></span>
         </div>
         <h2 class="roles_content__item__title">
           <a :href="link.anchor" :target="link.anchor.startsWith('/') ? '' : '_blank'" x-text="link.title"></a>

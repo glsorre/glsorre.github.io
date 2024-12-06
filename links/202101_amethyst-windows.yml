@@ -1,6 +1,6 @@
 title: amethyst windows
 tags: developer
 label: project
-anchor: https://amethystwindows.com
+anchor: https://github.com/glsorre/amethystwindows
 date: 2021-01
 desc: Tiling window manager for Windows 10 along the lines of xmonad and Amethyst.
