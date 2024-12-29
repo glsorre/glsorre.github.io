@@ -108,7 +108,6 @@ button:focus {
     top: 2.5rem;
     right: 2.5rem;
     text-indent: -9999px;
-    -webkit-mask: url("/assets/svg/menu button.svg") no-repeat center center;
     -webkit-mask-size: 2em;
     mask: url("/assets/svg/menu button.svg") no-repeat center center;
     mask-size: 2em;
@@ -122,8 +121,7 @@ button:focus {
     transition: all .3s ease-in-out;
 
     &.open {
-      -webkit-mask: url("/assets/svg/croce nera.svg") no-repeat center center !important;
-      mask: url("/assets/svg/menu button.svg") no-repeat center center !important;
+      mask: url("/assets/svg/croce nera.svg") no-repeat center center !important;
     }
 
     &:hover {
