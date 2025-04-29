@@ -51,11 +51,11 @@ title: Giuseppe Sorrentino
 <ul class="content" x-data="index" x-effect="effect">
   {%- for item in intros %}
     <li id="{{ item.title | slugify }}" class="content_item" x-show="show === {{ loop.index0 }}" x-transition x-transition:enter.duration.200ms x-transition:leave.duration.0ms>
-      <h1 class="{{ item.class or "content_item__title" }}">
+      <h1 class="{{ "content_item__title__rr" if item.rr else "content_item__title" }}">
         {{ item.title }}
       </h1>
       <div class="content_item__content">{{ item.content | safe }}</div>
+      <button class="{{ "content__next_m__rr" if item.rr else "content__next_m" }}" x-show="show < intros.length" @click="handleNext" x-transition>next</button>
     </li>
   {% endfor -%}
-  <button class="content__next_m" x-show="show < intros.length" @click="handleNext" x-transition>next</button>
 </ul>

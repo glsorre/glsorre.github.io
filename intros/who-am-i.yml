@@ -1,7 +1,7 @@
 order: 1
 title: who am I?
 slug: who-am-i
-class: content_item__title__rr
+rr: false
 content: >
   My name is Giuseppe Sorrentino and I'm a senior **software developer**.
 

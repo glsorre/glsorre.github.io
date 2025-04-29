@@ -24,18 +24,8 @@
           showMenu: false,
           hash: window.location.hash,
           init () {
-            if (window.localStorage.getItem('disclaimer') === 'accepted') {
-              document.body.classList.remove('overflow-hidden')
-              this.showDisclaimer = false
-            }
             window.addEventListener('hashchange', (e) => {
               this.hash = window.location.hash
-            })
-            window.addEventListener('storage', (e) => {
-              if (window.localStorage.getItem("sampleList") !== 'accepted') {
-                document.body.classList.add('overflow-hidden')
-                this.showDisclaimer = true
-              };
             })
           },
           toggleMenu(e) {
@@ -51,7 +41,7 @@
   </script>
 
   </head>
-  <body x-data="layout" class="overflow-hidden">
+  <body x-data="layout">
     <nav class="nav">
       <button class="nav__hamburger" :class="showMenu && 'open'" @click="toggleMenu">hamburger menu</button>
       <div class="nav__overlay" 
@@ -84,26 +74,6 @@
         </ul>
       </div>
     </nav>
-    <div class="disclaimer__overlay"
-      x-show="showDisclaimer" 
-      x-transition
-      x-transition:enter.duration.200ms
-      x-transition:leave.duration.200ms
-      >
-      <div class="disclaimer__content">
-        <h1 class="disclaimer__logo">giuseppe sorrentino</h1>
-        <p class="disclaimer__text">
-          Hello! My name is <b>Giuseppe</b>.
-        </p>
-        <p class="disclaimer__text">
-          I use cookies to <b>improve your experience and to understand how you interact with my website</b>.
-        </p>
-        <p class="disclaimer__text">
-          By continuing to use this site, <b>you accept glsorre.com's use of cookies</b>.
-        </p>
-        <button class="disclaimer__cta" @click="acceptDisclaimer">Got it!</button>
-      </div>
-    </div>
     {{ content | safe }}
   </body>
 </html>

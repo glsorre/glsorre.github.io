@@ -1,7 +1,7 @@
 order: 2
 title: my ideal tech stack
 slug: my-ideal-tech-stack
-class: content_item__title
+rr: false
 content: >
   These technologies form the backbone of **my ideal stack**, enabling me to deliver robust and scalable solutions.
 

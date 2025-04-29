@@ -14,7 +14,7 @@
   --nav-font-size: 2rem;
   --nav-line-height: 1.25;
   --nav-logo-font-size: 2.2rem;
-  --nav-logo-margin-top: .5rem;
+  --nav-logo-margin-top: 1rem;
   --intro-font-size: 2.2rem;
   --intro-line-height: 1.4;
   --roles-padding: 3rem 20vw;
@@ -46,7 +46,7 @@
     --intro-line-height: 1.4;
     --nav-font-size: 1.5rem;
     --nav-logo-font-size: 1.75em;
-    --nav-logo-margin-top: .5rem
+    --nav-logo-margin-top: 1rem;
     --roles-pages-title-font-size: 9.5vw;
     --roles-buttons-grid: repeat(1, 1fr);
     --roles-buttons-font-size: 6.5vw;
@@ -160,10 +160,11 @@ button:focus {
     & .nav__logo {
       background: url("/assets/svg/quadratino verde.svg") no-repeat center left;
       background-size: .7em;
-      padding-left: 1.25em;
+      padding: 0 1.25em;
       font-size: var(--nav-logo-font-size);
       margin-top: var(--nav-logo-margin-top);
       margin-right: -3rem;
+      line-height: .9em;
     }
 
     & .nav__list__item {
@@ -298,7 +299,25 @@ button:focus {
     -webkit-mask: url("/assets/svg/frecce navigazione.svg") no-repeat center center;
     -webkit-mask-size: 8rem 8rem;
     padding: 0;
-    margin: 4rem 0;
+    margin: 4rem 0 0 0;
+    transition: background-color .3s ease-in-out;
+
+    &:hover {
+      background-color: var(--dark-color);
+    }
+  }
+
+  & .content__next_m__rr {
+    text-indent: -9999px;
+    width: 100%;
+    height: 8rem;
+    background-color: #B789C3;
+    mask: url("/assets/svg/frecce navigazione.svg") no-repeat center center;
+    mask-size: 8rem 8rem;
+    -webkit-mask: url("/assets/svg/frecce navigazione.svg") no-repeat center center;
+    -webkit-mask-size: 8rem 8rem;
+    padding: 0;
+    margin: 4rem 0 0 0;
     transition: background-color .3s ease-in-out;
 
     &:hover {
@@ -307,6 +326,8 @@ button:focus {
   }
 
   & .content_item {
+    display: flex;
+    flex-direction: column;
     flex: 1;
     flex-shrink: 1;
     box-sizing: border-box;
@@ -328,6 +349,10 @@ button:focus {
       margin-right: -3rem;
       font-size: var(--intro-font-size);
       line-height: var(--intro-line-height);
+    }
+
+    & .content_item__content{
+      flex: 1;
     }
 
     & p {
