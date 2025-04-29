@@ -1,21 +1,15 @@
 order: 1
 title: who am I?
 slug: who-am-i
+class: content_item__title__rr
 content: >
-  I'm a **seasoned software developer** with a decade of experience specializing
-  in crafting innovative user interfaces.
+  My name is Giuseppe Sorrentino and I'm a senior **software developer**.
 
 
-  **My expertise lies in front-end development**, where I excel in analyzing
-  requirements and designing customized technical solutions using React,
-  SingleSPA, Mobx, and other leading frameworks. I seamlessly integrate frontend
-  and backend technologies to ensure optimal user experiences.
+  My expertise lies in **front-end development**, where I am expert in analysing requirements and designing customised technical solutions base on React, Vue and other leading frameworks.
 
 
-  My journey began when I received my first Personal Computer, based on the
-  8086, at the age of 8. Despite spending half of my career in Design, UX, and
-  Agile positions, **I returned to my first love, coding**.
+  **Committed to excellence**, I have experience in TDD, BDD and major coding principles to ensure high-quality code.
 
 
-  **I proudly manage my personal brand**, Right Right, where I create digital
-  products by harmonizing design, management, and coding aspects
+  I am continous learner, with minor experience in python and js/ts **back-end development**.

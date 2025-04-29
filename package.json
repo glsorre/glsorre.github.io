@@ -25,7 +25,7 @@
     "vite": "^6.0.0"
   },
   "scripts": {
-    "serve": "npx tinacms dev -c 'npx @11ty/eleventy --serve'",
+    "serve": "npx tinacms dev -c \"npx @11ty/eleventy --serve\"",
     "build:11ty": "npx @11ty/eleventy",
     "build:tinacms": "npx tinacms build",
     "build": "npm run build:11ty && npm run build:tinacms"

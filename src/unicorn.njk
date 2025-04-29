@@ -1,6 +1,6 @@
 ---
 layout: layout.njk
-title: Giuseppe Sorrentino - Unicorn - Right Right
+title: Giuseppe Sorrentino - Unicorn
 ---
 
 <script>
@@ -37,19 +37,6 @@ title: Giuseppe Sorrentino - Unicorn - Right Right
                   this.showMenu = false
                 }, 200)
               })
-
-              this.$watch('showDisclaimer', (value) => {
-                if (!value) {
-                  document.getElementById('typed').innerText = ''
-                  const slug = window.location.hash.replace('#', '')
-                  this.typed = new window.Typed('#typed', {
-                    strings: [slug || 'unicorn'],
-                    autoStart: true,
-                    showCursor: false,
-                    typeSpeed: 100,
-                  })
-                }
-              })
             },
             effect () {
               if (window.location.hash) {
@@ -84,7 +71,7 @@ title: Giuseppe Sorrentino - Unicorn - Right Right
 <div class="container" x-data="unicorn" x-effect="effect">
   <ul class="content">
     <li class="content_item">
-      <h1 class="content_item__title__rr" x-effect="titleEffect">i'm a <span id="typed">unicorn</span></h1>
+      <h1 class="content_item__title" x-effect="titleEffect">i'm a <span id="typed">unicorn</span></h1>
       <div class="links">
         <div :class="hash === '#writer' ? 'link_item active' : 'link_item'">
           <a class="link_item__anchor" @click="toggleFilter($event, 'writer')" href="/unicorn/#writer">writer</a>
