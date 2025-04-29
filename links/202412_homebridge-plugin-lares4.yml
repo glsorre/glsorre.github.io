@@ -1,0 +1,7 @@
+title: Homebridge Plugin Lares4
+tags: developer
+label: repository
+anchor: https://github.com/glsorre/homebridge-plugin-lares4
+date: 2024-12
+desc: |
+  A homebridge plugin to expose Ksenia Lares 4 home automation systems on the Apple ecosystem.
