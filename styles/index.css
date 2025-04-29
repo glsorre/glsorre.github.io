@@ -587,13 +587,9 @@ button:focus {
   & .roles_content__item__title__rr {
     display: inline-block;
     margin: .5rem auto;
-    padding-left: 2rem;
     margin-right: 2.5rem;
     position: relative;
     color: #B789C3;
-    background: url("/assets/svg/marchio right right.svg") no-repeat center left;
-    background-size: .725em;
-
     
     & a {
       color: #B789C3;
@@ -607,13 +603,12 @@ button:focus {
       top: 0;
       right: 100%;
       height: 100%;
-      background-color: #B789C3;
-      mask: url("/assets/svg/freccia pagina interna 1.svg") no-repeat left center;
-      mask-size: .4em;
+      background: url("/assets/svg/marchio right right.svg") no-repeat center left;
+      background-size: .725em;
       content: '';
     }
 
-    &:after {
+    /* &:after {
       position: absolute;
       display: block;
       z-index: 3;
@@ -625,7 +620,7 @@ button:focus {
       background-color: #B789C3;
       mask: url("/assets/svg/freccia pagina interna 2.svg") no-repeat center right;
       mask-size: .4em;
-    }
+    } */
   }
 }
 
