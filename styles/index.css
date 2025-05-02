@@ -547,6 +547,14 @@ button:focus {
     margin-top: 1.9rem;
   }
 
+  & .roles_content__item__image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    background: rgba(149,195,137,.25);
+  }
+
   & .roles_content__info__label {
     font-family: Kenney, sans-serif;
   }
@@ -567,7 +575,7 @@ button:focus {
     color: #95c389;
     
     & a {
-      color: #95c389;
+      color: rgb(149, 195, 137);
     }
 
     &:after {
