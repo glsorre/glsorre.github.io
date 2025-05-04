@@ -553,6 +553,10 @@ button:focus {
     justify-content: center;
     margin: 1rem 0;
     background: rgba(149,195,137,.25);
+
+    & img {
+      width: 200px;
+    }
   }
 
   & .roles_content__info__label {
