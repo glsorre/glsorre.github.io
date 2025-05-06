@@ -9,12 +9,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/b2e3258d43.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="/styles/index.css">
 
     <script>
       document.addEventListener('alpine:init', () => {
         Alpine.data('layout', () => ({
           showMenu: false,
+          showFooter: true,
           hash: window.location.hash,
           init () {
             window.addEventListener('hashchange', (e) => {
@@ -48,7 +50,7 @@
           <li class="nav__list__item">
             <h1 class="nav__logo">giuseppe sorrentino</h1>
             <p class="nav__contacts">
-              ✉️ giuseppe [at] glsorre [dot] com
+              Built with 💚 by Giuseppe Sorrentino
             </p>
           </li>
           {%- for item in navigations -%}
@@ -68,5 +70,24 @@
       </div>
     </nav>
     {{ content | safe }}
+    <footer class="content" x-show="showFooter" x-transition x-transition x-transition:enter.duration.200ms x-transition:leave.duration.200ms>
+      <div class="content_item">
+        <p>
+          Built with 🤍 by Giuseppe Sorrentino
+        </p>
+        <p>
+          ✉️ giuseppe [at] glsorre [dot] com
+          <a href="https://github.com/glsorre">
+              <i class="fa-brands fa-github"></i> GitHub
+          </a>
+          <a href="https://linkedin.com/in/glsorrentino">
+              <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+          <a href="https://bsky.app/profile/glsorre.bsky.social">
+              <i class="fa-brands fa-bluesky"></i> Bluesky
+          </a>
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
