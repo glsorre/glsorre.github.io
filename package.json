@@ -11,12 +11,12 @@
     "alpinejs": "^3.14.6",
     "lodash": "^4.17.21",
     "luxon": "^3.3.0",
-    "tinacms": "^2.5.0",
+    "tinacms": "^2.1.1",
     "typed.js": "^2.1.0"
   },
   "devDependencies": {
-    "@tinacms/cli": "^1.6.12",
-    "@11ty/eleventy-plugin-vite": "^5.0.2",
+    "@11ty/eleventy-plugin-vite": "^7.0.0",
+    "@tinacms/cli": "^1.10.3",
     "autoprefixer": "^10.4.14",
     "glob": "^10.2.6",
     "js-yaml": "^4.1.0",
