@@ -9,14 +9,13 @@
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "alpinejs": "^3.14.6",
+    "fast-glob": "^3.3.3",
     "lodash": "^4.17.21",
     "luxon": "^3.3.0",
-    "tinacms": "^2.1.1",
     "typed.js": "^2.1.0"
   },
   "devDependencies": {
     "@11ty/eleventy-plugin-vite": "^7.0.0",
-    "@tinacms/cli": "^1.10.3",
     "autoprefixer": "^10.4.14",
     "glob": "^10.2.6",
     "js-yaml": "^4.1.0",
@@ -25,10 +24,8 @@
     "vite": "^6.3.4"
   },
   "scripts": {
-    "serve": "npx tinacms dev -c \"npx @11ty/eleventy --serve\"",
-    "build:11ty": "npx @11ty/eleventy",
-    "build:tinacms": "npx tinacms build",
-    "build": "npm run build:11ty && npm run build:tinacms"
+    "serve": "npx @11ty/eleventy --serve",
+    "build": "npx @11ty/eleventy"
   },
   "type": "module"
 }
