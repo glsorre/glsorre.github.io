@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Slide from '../components/Slide.astro';
+---
+
+<Layout title="Giuseppe Sorrentino - Experience" description="I'm Giuseppe Sorrentino, a software engineer with experience in creating and delivering digital products.">
+	<main class="flex flex-row w-full min-h-full">
+		<Slide prefix="Tech" title="Stack">
+			<p class="quicksand-600 min-md:pl-10 pt-2 pb-4 text-md">Here are some of the technologies and tools I work with:</p>
+			<ul class="grid max-md:grid-cols-1 grid-cols-3 gap-6 min-md:pl-10">
+				<div class="bg-glsorre-40 p-4 rounded-2xl text-center">
+					<div class="text-4xl p-8">
+						<i class="bi bi-cursor"></i>
+					</div>
+					<div class="text-left">
+						<h3 class="quicksand-600 text-2xl">Frontend</h3>
+						<p>Javascript / Typescript (React, Vue, SingleSPA, Alpine JS)</p>
+					</div>
+				</div>
+				<div class="bg-glsorre-40 p-4 rounded-2xl text-center">
+					<div class="text-4xl p-8">
+						<i class="bi bi-hdd-stack"></i>
+					</div>
+					<div class="text-left">
+						<h3 class="quicksand-600 text-2xl">Backend</h3>
+						<p>Python (Django, Flask, Chalice), Node.js (Express), Golang, C# (.NET)</p>
+					</div>
+				</div>
+				<div class="bg-glsorre-40 p-4 rounded-2xl text-center">
+					<div class="text-4xl p-8">
+						<i class="bi bi-database"></i>
+					</div>
+					<div class="text-left">
+						<h3 class="quicksand-600 text-2xl">Databases</h3>
+						<p>Postgres, DocumentDB, DynamoDB</p>
+					</div>
+				</div>
+				<div class="bg-glsorre-40 p-4 rounded-2xl text-center">
+					<div class="text-4xl p-8">
+						<i class="bi bi-truck"></i>
+					</div>
+					<div class="text-left">
+						<h3 class="quicksand-600 text-2xl">CI/CD</h3>
+						<p>Jenkins, Github Actions, Gitlab CI</p>
+					</div>
+				</div>
+				<div class="bg-glsorre-40 p-4 rounded-2xl text-center">
+					<div class="text-4xl p-8">
+						<i class="bi bi-cloud"></i>
+					</div>
+					<div class="text-left">
+						<h3 class="quicksand-600 text-2xl">Cloud & DevOps</h3>
+						<p>Docker, Terraform, Kubernetes, AWS, GCP, Azure</p>
+					</div>
+				</div>
+				<div class="bg-glsorre-40 p-4 rounded-2xl text-center">
+					<div class="text-4xl p-8">
+						<i class="bi bi-nut"></i>
+					</div>
+					<div class="text-left">
+						<h3 class="quicksand-600 text-2xl">Methodologies</h3>
+						<p>UX Design, TDD, SpecDD</p>
+					</div>
+				</div>
+				<div class="bg-glsorre-40 p-4 rounded-2xl text-center">
+					<div class="text-4xl p-8">
+						<i class="bi bi-window-stack"></i>
+					</div>
+					<div class="text-left">
+						<h3 class="quicksand-600 text-2xl">Desktop & Mobile</h3>
+						<p>SwiftUI, WinUI, Flutter, ReactNative</p>
+					</div>
+				</div>
+			</ul>
+		</Slide>
+	</main>
+</Layout>
+
+<style>
+	.spunta {
+		background: url('src/assets/spunta.svg') no-repeat left 5px;
+		background-size: 18px;
+	}
+	.cerchio {
+		background: url('src/assets/cerchio.svg') no-repeat left 5px;
+		background-size: 18px;
+	}
+	.linea {
+		position: relative;
+	}
+	.linea::before {
+		content: ' ';
+		display: block;
+		position: absolute;
+		background: #95c389;
+		margin-left: -29px;
+		width: 4px;
+		top: 0;
+		bottom: 0;
+		z-index: -1;
+	}
+</style>

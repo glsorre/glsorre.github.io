@@ -1,0 +1,12 @@
+---
+const { href, mobile } = Astro.props;
+const active = Astro.url.pathname === href;
+
+const classes = mobile ? "bg-glsorre-40" : "bg-white dark:bg-black";
+---
+
+<li class="my-2">
+    <a class:list={["p-4 rounded-2xl", { [classes]: active }]} href={href}>
+        <slot />
+    </a>
+</li>

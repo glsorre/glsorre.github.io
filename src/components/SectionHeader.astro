@@ -1,0 +1,15 @@
+---
+const { prefix, title } = Astro.props;
+---
+
+<h1 class="kenney-400 text-4xl px-10 mb-10">
+    {prefix}
+    <span class="kenney-600">{title}</span>
+</h1>
+
+<style>
+    h1 {
+        background: url('../assets/freccia\ menù\ 1.svg') no-repeat left 8px;
+        background-size: 14px;
+    }
+</style>

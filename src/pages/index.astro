@@ -1,0 +1,33 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Slide from '../components/Slide.astro';
+
+import { getCollection } from 'astro:content';
+const links = (await getCollection('links')).sort((a, b) => 
+	new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+---
+
+<Layout title="Giuseppe Sorrentino - About" description="I'm Giuseppe Sorrentino, a software engineer specialized in shortening time-to-market of digital products.">
+	<main class="flex w-full">
+		<Slide prefix="I'm a" title="software engineer">
+			<ol class="pl-14 pb-10 list-decimal flex flex-col gap-3">
+				<li>Specialized in <strong>shortening time-to-market</strong> of digital products</strong></li>
+				<li>Passionate about <strong>creating delightful digital products</strong> for web, mobile, and desktop</li>
+				<li><strong>Full stack</strong> oriented</li>			
+			</ol>
+			<a target="_blank" href="https://www.rightright.me">
+				<p class="px-10 bg-right-right-40 p-4">
+					I create and distribute delightful digital products at <span class="logo-right-right kenney-600 text-4xl pl-10 ml-3">right right</span>
+				</p>
+			</a>
+		</Slide>
+	</main>
+</Layout>
+
+<style>
+	.logo-right-right {
+		background: url('../assets/marchio right right.svg') no-repeat left center;
+		background-size: 24.5px;
+	}
+</style>

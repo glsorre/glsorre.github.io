@@ -2,9 +2,9 @@ name: CI
 
 on:
   push:
-    branches: [ "11ty" ]
+    branches: [ "astro" ]
   pull_request:
-    branches: [ "11ty" ]
+    branches: [ "astro" ]
 
   workflow_dispatch:
 
@@ -24,9 +24,7 @@ jobs:
 
       - name: Build static site
         env:
-          HEAD: 11ty
-          TINA_CLIENTID: ${{ secrets.TINA_CLIENTID }}
-          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
+          HEAD: astro
         run: npm run build
 
       - name: Archive artifact

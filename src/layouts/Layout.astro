@@ -1,0 +1,37 @@
+---
+import '../styles/global.css';
+import NavBar from '../components/NavBar.astro';
+import NavItem from '../components/NavItem.astro';
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="description" content={description} />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<script>
+			const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches
+			if (isDark) {
+				document.documentElement.classList.add("dark");
+			} else {
+				document.documentElement.classList.remove("dark");
+			}
+		</script>
+	</head>
+	<body>
+		<NavBar>
+			<span slot="title">Giuseppe Sorrentino</span>
+			<NavItem href="/">About</NavItem>
+			<NavItem href="/experience">Experience</NavItem>
+			<NavItem href="/stack">Stack</NavItem>
+			<NavItem href="/projects">Projects</NavItem>
+		</NavBar>
+		<slot />
+	</body>
+</html>

@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Slide from '../components/Slide.astro';
+
+import { getCollection, render } from 'astro:content';
+
+const experiences = (await getCollection('experiences')).sort((a, b) => 
+	b.data.end_year === 'Present' ? 1 : a.data.end_year === 'Present' ? -1 : b.data.end_year - a.data.end_year
+);
+
+const experiencesBodies = await Promise.all(
+	experiences.map(async (exp) => {
+		const { Content } = await render(exp);
+		return Content;
+	})
+);
+---
+
+<Layout title="Giuseppe Sorrentino - Experience" description="I'm Giuseppe Sorrentino, a software engineer with experience in creating and delivering digital products.">
+	<main class="flex flex-row w-full min-h-full">
+		<Slide title="Experience">
+			{experiences.map((exp, index) => (
+				<div class="flex flex-col">
+					<h2 class:list={["text-xl pl-10", {spunta: index !== 0}, {cerchio: index === 0}]}>{exp.data.title}</h2>
+					<p class="quicksand-600 ml-10 pt-2 pb-4 text-md linea">{exp.data.start_year} - {exp.data.end_year}</p>
+					<div class="prose ml-10 pb-15 linea max-w-none">
+						<experiencesBodies[experiences.indexOf(exp)] />
+					</div>
+				</div>
+			))}
+		</Slide>
+	</main>
+</Layout>
+
+<style>
+	.spunta {
+		background: url('../assets/spunta.svg') no-repeat left 5px;
+		background-size: 18px;
+	}
+	.cerchio {
+		background: url('../assets/cerchio.svg') no-repeat left 5px;
+		background-size: 18px;
+	}
+	.linea {
+		position: relative;
+	}
+	.linea::before {
+		content: ' ';
+		display: block;
+		position: absolute;
+		background: #95c389;
+		margin-left: -33px;
+		width: 4px;
+		top: 0;
+		bottom: 0;
+		z-index: -1;
+	}
+</style>

@@ -1,0 +1,52 @@
+---
+import NavItem from "./NavItem.astro";
+---
+
+<nav class="bg-glsorre-40" x-data="{ open: false }">
+    <div class="max-md:w-[80%] w-[50%] m-auto flex justify-between items-center py-10">
+        <p class="kenney-600 px-6 text-xl quatratino">
+            <slot name="title" />
+        </p>
+        <ul class="flex max-md:hidden gap-5 quicksand-600">
+            <slot />
+        </ul>
+        <button class="md:hidden text-3xl hamburger" @click="open = true">
+        </button>
+    </div>
+    <div class="absolute top-5 bottom-5 left-5 right-5 shadow-xl rounded-2xl bg-white dark:bg-black" x-show="open" x-transition>
+        <ul class="flex flex-col gap-5 quicksand-600 p-10">
+            <div class="flex items-center justify-between">
+                <p class="kenney-600 px-6 text-xl quatratino">
+                    Giuseppe Sorrentino
+                </p>
+                <button class="text-3xl croce" @click="open = false">
+                </button>
+            </div>
+            <NavItem mobile href="/">About</NavItem>
+			<NavItem mobile href="/experience">Experience</NavItem>
+			<NavItem mobile href="/stack">Stack</NavItem>
+			<NavItem mobile href="/projects">Projects</NavItem>
+        </ul>
+    </div>
+</nav>
+
+<style>
+    .quatratino {
+        background: url('../assets/quadratino.svg') no-repeat left 6.5px;
+        background-size: 13.75px;
+    }
+
+    .hamburger {
+        background: url('../assets/menu.svg') no-repeat center;
+        background-size: 24px;
+        width: 28px;
+        height: 28px;
+    }
+
+    .croce {
+        background: url('../assets/croce.svg') no-repeat center;
+        background-size: 24px;
+        width: 28px;
+        height: 28px;
+    }
+</style>
