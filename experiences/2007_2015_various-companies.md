@@ -4,4 +4,4 @@ start_year: 2007
 end_year: 2015
 ---
 
-Worked with various companies as a UX specialist and web developer, focusing on improving user experience and implementing web solutions.
+Provided full-stack development and UX consultancy for diverse clients, bridging the gap between UX design and software implementation.
