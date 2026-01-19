@@ -1,7 +1,10 @@
 ---
 title: UX Specialist / Web Developer
+company: Various Companies
 start_year: 2007
 end_year: 2015
 ---
 
-Provided full-stack development and UX consultancy for diverse clients, bridging the gap between UX design and software implementation.
+1. Full-stack development using **HTML5, CSS3, JavaScript, Python and Django/Flask**
+2. UX design/research for e-commerce and online games
+

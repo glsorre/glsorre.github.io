@@ -20,6 +20,7 @@ const experiences = defineCollection({
     loader: glob({ pattern: '**/*.md', base: "./experiences" }),
     schema: z.object({
         title: z.string(),
+        company: z.string(),
         start_year: z.number().int().min(1900).max(new Date().getFullYear()),
         end_year: z.union([z.number().int().min(1900).max(new Date().getFullYear()), z.literal('Present')]),
     }),
@@ -33,4 +34,14 @@ const projects = defineCollection({
     }),
 });
 
-export const collections = { links, experiences, projects };
+const stack = defineCollection({
+    loader: glob({ pattern: '**/*.md', base: "./stack"  }),
+    schema: z.object({
+        icon: z.string(),
+        order: z.number().int().min(0),
+        title: z.string(),
+        skills: z.string(),
+    }),
+});
+
+export const collections = { links, experiences, projects, stack };

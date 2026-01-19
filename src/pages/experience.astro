@@ -22,7 +22,10 @@ const experiencesBodies = await Promise.all(
 			{experiences.map((exp, index) => (
 				<div class="flex flex-col">
 					<h2 class:list={["text-xl pl-10", {spunta: index !== 0}, {cerchio: index === 0}]}>{exp.data.title}</h2>
-					<p class="quicksand-600 ml-10 pt-2 pb-4 text-md linea">{exp.data.start_year} - {exp.data.end_year}</p>
+					<div class="flex justify-between items-center">
+					<p class="quicksand-600 ml-10 text-md linea">{exp.data.company}</p>
+					<p class="quicksand-600 text-md">{exp.data.start_year} - {exp.data.end_year}</p>
+					</div>
 					<div class="prose ml-10 pb-15 linea max-w-none">
 						<experiencesBodies[experiences.indexOf(exp)] />
 					</div>
