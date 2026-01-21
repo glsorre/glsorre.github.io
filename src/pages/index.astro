@@ -11,13 +11,35 @@ const links = (await getCollection('links')).sort((a, b) =>
 <Layout title="Giuseppe Sorrentino - About" description="I'm Giuseppe Sorrentino, a software engineer specialized in shortening time-to-market of digital products.">
 	<main class="flex w-full">
 		<Slide prefix="I'm a" title="software engineer">
-			<ul class="pl-14 pb-10 list-disc flex flex-col gap-3">
-				<li>Over <strong>10 years of experience</strong> in software development</li>
-				<li>Passionate about <strong>creating complex digital products</strong> for web, mobile, and desktop</li>			
+			<ul class="pl-14 pb-20 list-disc flex flex-col gap-4">
+				<li>
+					<div class="flex flex-col gap-4">
+						<p>Over <strong>10 years of experience</strong> in software development</p>
+						<div>
+							<a href="/experience/" class="bg-glsorre-40 hover:bg-glsorre-60 p-2 rounded trasition-background quicksand-500">Check my Experience</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="flex gap-4 flex-col">
+						<p>Passionate about <strong>creating delightful digital products</strong> for web, mobile, and desktop</p>
+						<div>
+							<a href="/projects/" class="bg-glsorre-40 hover:bg-glsorre-60 p-2 rounded trasition-background quicksand-500">See my Projects</a>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="flex gap-4 flex-col">
+						<p>Full-stack, <strong>frontend oriented</strong></p>
+						<div>
+							<a href="/projects/" class="bg-glsorre-40 hover:bg-glsorre-60 p-2 rounded trasition-background quicksand-500">Discover my Stack</a>
+						</div>
+					</div>
+				</li>		
 			</ul>
 			<a target="_blank" href="https://www.rightright.me">
-				<p class="px-10 bg-right-right-40 p-4">
-					I create and distribute delightful digital products at <span class="logo-right-right kenney-600 text-4xl pl-10 ml-3">right right</span>
+				<p class="px-10 bg-right-right-40 hover:bg-right-right-60 p-4 rounded transition-background inline-block">
+					In my free time I work on digital products at <span class="logo-right-right kenney-600 text-2xl pl-6 ml-2">right right</span>
 				</p>
 			</a>
 		</Slide>
@@ -27,6 +49,6 @@ const links = (await getCollection('links')).sort((a, b) =>
 <style>
 	.logo-right-right {
 		background: url('../assets/marchio right right.svg') no-repeat left center;
-		background-size: 24.5px;
+		background-size: 17px;
 	}
 </style>
