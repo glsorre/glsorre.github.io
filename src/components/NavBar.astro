@@ -37,18 +37,28 @@ import NavItem from "./NavItem.astro";
     }
 
     .hamburger {
-        background: url('../assets/menu.svg') no-repeat center;
-        background-size: 24px;
+        mask: url('../assets/menu.svg') no-repeat center;
+        mask-size: 24px;
         width: 28px;
         height: 28px;
         cursor: pointer;
+        background-color: black;
+    }
+
+    html.dark .hamburger {
+        background-color: white;
     }
 
     .croce {
-        background: url('../assets/croce.svg') no-repeat center;
-        background-size: 24px;
+        mask: url('../assets/croce.svg') no-repeat center;
+        mask-size: 24px;
         width: 28px;
         height: 28px;
         cursor: pointer;
+        background-color: black;
+    }
+
+    html.dark .croce {
+        background-color: white;
     }
 </style>

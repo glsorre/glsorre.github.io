@@ -27,7 +27,7 @@ const experiencesBodies = await Promise.all(
 					<p class="quicksand-600 text-md">{exp.data.start_year} - {exp.data.end_year}</p>
 					</div>
 					<div class="prose ml-10 pb-15 linea max-w-none">
-						<experiencesBodies[experiences.indexOf(exp)] />
+						<experiencesBodies[experiences.indexOf(exp)] class="prose" />
 					</div>
 				</div>
 			))}

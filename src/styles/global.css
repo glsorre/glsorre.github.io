@@ -90,3 +90,8 @@ html.dark .prose {
   background-color: black;
   color: white;
 }
+
+html.dark .prose * {
+  background-color: black;
+  color: white;
+}
