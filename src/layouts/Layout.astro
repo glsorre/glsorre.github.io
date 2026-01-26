@@ -16,19 +16,15 @@ const { title, description } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<script async src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
-		<script>
-			const isDark = window.matchMedia("(prefers-color-scheme: dark)").matches
-			if (isDark) {
-				document.documentElement.classList.add("dark");
-			} else {
-				document.documentElement.classList.remove("dark");
-			}
-		</script>
 	</head>
 	<body>
 		<main class="flex flex-col min-h-screen">
 			<NavBar>
-				<span slot="title">Giuseppe Sorrentino</span>
+				<span slot="title">
+					<a href="/" class="rounded hover:bg-white hover:dark:bg-black">
+						Giuseppe Sorrentino
+					</a>
+				</span>
 				<NavItem href="/">About</NavItem>
 				<NavItem href="/experience/">Experience</NavItem>
 				<NavItem href="/stack/">Stack</NavItem>

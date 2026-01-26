@@ -13,7 +13,7 @@ const links = (await getCollection('links')).sort((a, b) =>
 		<Slide title="Projects">
 			<ol class="min-lg:pl-10 list-decimal flex flex-col gap-3">
 				{links.map((link) => (
-					<a href={link.data.anchor} class="flex items-center justify-between bg-glsorre-40 p-4 rounded-2xl hover:scale-[1.02] transition-transform group">
+					<a href={link.data.anchor} target={link.data.target || "_self"} rel="noopener noreferrer" class="flex items-center justify-between bg-glsorre-40 p-4 rounded-2xl hover:scale-[1.02] transition-transform group">
 						<div>
 							<h3 class="quicksand-600 text-2xl capitalize">{link.data.title}</h3>
 							<p class="pt-2 text-md">{link.data.desc}</p>

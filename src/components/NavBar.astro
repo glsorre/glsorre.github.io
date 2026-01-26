@@ -4,7 +4,7 @@ import NavItem from "./NavItem.astro";
 
 <nav class="bg-glsorre-40" x-data="{ open: false }">
     <div class="max-lg:w-[80%] w-[50%] m-auto flex justify-between items-center py-10">
-        <p class="kenney-600 px-6 text-xl quatratino">
+        <p class="kenney-600 px-6 text-xl quadratino">
             <slot name="title" />
         </p>
         <ul class="flex max-lg:hidden gap-5 quicksand-600">
@@ -13,10 +13,10 @@ import NavItem from "./NavItem.astro";
         <button class="min-lg:hidden text-3xl hamburger" @click="open = true">
         </button>
     </div>
-    <div class="fixed top-5 bottom-5 left-5 right-5 shadow-xl rounded-2xl bg-white dark:bg-black z-1000" x-show="open" x-transition>
+    <div class="fixed top-5 bottom-5 left-5 right-5 shadow-xl rounded bg-white dark:bg-black z-1000" x-show="open" x-transition>
         <ul class="flex flex-col gap-5 quicksand-600 p-10">
             <div class="flex items-center justify-between">
-                <p class="kenney-600 px-6 text-xl quatratino">
+                <p class="kenney-600 px-6 text-xl quadratino">
                     Giuseppe Sorrentino
                 </p>
                 <button class="text-3xl croce" @click="open = false">
@@ -31,7 +31,7 @@ import NavItem from "./NavItem.astro";
 </nav>
 
 <style>
-    .quatratino {
+    .quadratino {
         background: url('../assets/quadratino.svg') no-repeat left 6.5px;
         background-size: 13.75px;
     }

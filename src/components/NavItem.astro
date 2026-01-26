@@ -3,7 +3,7 @@ const { href, mobile } = Astro.props;
 ---
 
 <li class="my-2" x-data={`{ active: window.location.pathname === '${href}', mobile: ${mobile} }`}>
-    <a :class="{'p-4 rounded-2xl': true, 'bg-white dark:bg-black': active && !mobile, 'bg-glsorre-40': active && mobile}" href={href}>
+    <a :class="{'p-4 rounded': true, 'bg-white dark:bg-black': active && !mobile, 'bg-glsorre-40': active && mobile}" href={href}>
         <slot />
     </a>
 </li>

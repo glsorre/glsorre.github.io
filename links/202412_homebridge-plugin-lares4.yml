@@ -6,3 +6,4 @@ date: 2024-12
 img: /assets/homebridgePluginLares4_cover.png
 desc: |
   a homebridge plugin to expose Ksenia Lares 4 home automation entities on the Apple ecosystem
+target: _blank

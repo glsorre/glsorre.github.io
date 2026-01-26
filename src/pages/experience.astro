@@ -17,20 +17,38 @@ const experiencesBodies = await Promise.all(
 ---
 
 <Layout title="Giuseppe Sorrentino - Experience" description="I'm Giuseppe Sorrentino, a software engineer with experience in creating and delivering digital products.">
-	<main class="flex flex-row w-full min-h-full">
-		<Slide title="Experience">
+	<main class="flex flex-col w-full min-h-full">
+		<Slide prefix="work" title="Experience">
 			{experiences.map((exp, index) => (
 				<div class="flex flex-col">
 					<h2 class:list={["text-xl pl-10", {spunta: index !== 0}, {cerchio: index === 0}]}>{exp.data.title}</h2>
-					<div class="flex justify-between items-center">
-					<p class="quicksand-600 ml-10 text-md linea">{exp.data.company}</p>
-					<p class="quicksand-600 text-md">{exp.data.start_year} - {exp.data.end_year}</p>
-					</div>
-					<div class="prose ml-10 pb-15 linea max-w-none">
-						<experiencesBodies[experiences.indexOf(exp)] class="prose" />
+					<div class="linea">
+						<div class="flex max-lg:flex-col max-lg:justify-start justify-between">
+							<p class="quicksand-600 ml-10 text-md">{exp.data.company}</p>
+							<p class="quicksand-600 ml-10 text-md">{exp.data.start_year} - {exp.data.end_year}</p>
+						</div>
+						<div class="prose ml-10 pb-15 max-w-none">
+							<experiencesBodies[experiences.indexOf(exp)] class="prose" />
+						</div>
 					</div>
 				</div>
 			))}
+		</Slide>
+		<Slide title="Education">
+			<div class="flex flex-col">
+				<h2 class="text-xl pl-10 spunta">MSc Human-Computer Interaction</h2>
+				<div class="flex max-lg:flex-col max-lg:justify-start justify-between pb-15 linea">
+					<p class="quicksand-600 ml-10 text-md">University College London</p>
+					<p class="quicksand-600 ml-10 text-md">2009 - 2010</p>
+				</div>
+			</div>
+			<div class="flex flex-col">
+				<h2 class="text-xl pl-10 spunta">MSc Industrial Design</h2>
+				<div class="flex max-lg:flex-col max-lg:justify-start justify-between pb-15 linea">
+					<p class="quicksand-600 ml-10 text-md">Politecnico di Torino</p>
+					<p class="quicksand-600 ml-10 text-md">2000 - 2006</p>
+				</div>
+			</div>
 		</Slide>
 	</main>
 </Layout>
@@ -52,7 +70,7 @@ const experiencesBodies = await Promise.all(
 		display: block;
 		position: absolute;
 		background: #95c389;
-		margin-left: -33px;
+		margin-left: 7px;
 		width: 4px;
 		top: 0;
 		bottom: 0;

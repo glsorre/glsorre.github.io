@@ -13,6 +13,7 @@ const links = defineCollection({
         anchor: z.string().url(),
         date: z.coerce.date(),
         desc: z.string(),
+        target: z.string().optional(),
     }),
 });
 
