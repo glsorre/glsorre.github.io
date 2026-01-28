@@ -5,7 +5,7 @@ const { prefix, title } = Astro.props;
 ---
 
 <section class="w-full h-full flex" x-data="{ shown: false }" x-init="setTimeout(() => { shown = true }, 100)" x-show="shown" x-transition>
-    <div class="max-lg:w-[80%] w-[50%] flex flex-col m-auto mt-[12.5vh] py-20">
+    <div class="max-xl:w-[90%] w-[50%] flex flex-col m-auto mt-[12.5vh] py-20">
         <SectionHeader prefix={prefix} title={title} />
         <slot />
     </div>

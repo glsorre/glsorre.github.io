@@ -28,11 +28,9 @@ const { title, description } = Astro.props;
 	<body>
 		<main class="flex flex-col min-h-screen">
 			<NavBar>
-				<span slot="title">
-					<a href="/" class="rounded hover:bg-white hover:dark:bg-black">
-						Giuseppe Sorrentino
-					</a>
-				</span>
+				<a slot="title" href="/" class="block rounded quadratino py-3.5 pl-10 mr-2 h-[52px] w-[273px] kenney-600 text-xl">
+					Giuseppe Sorrentino
+				</a>
 				<NavItem href="/">About</NavItem>
 				<NavItem href="/experience/">Experience</NavItem>
 				<NavItem href="/stack/">Stack</NavItem>
@@ -41,7 +39,7 @@ const { title, description } = Astro.props;
 			<div class="flex-1">
 				<slot />
 			</div>
-			<footer class="flex py-4 max-lg:flex-col items-center justify-center bg-glsorre-40 quicksand-400 gap-4 text-sm dark:color-white color-black">
+			<footer class="flex py-4 max-xl:flex-col items-center justify-center bg-glsorre-40 quicksand-400 gap-4 text-sm dark:color-white color-black">
 				<p><span class="quicksand-600">&copy; {new Date().getFullYear()}</span> glsorre.com</p>
 				<p class="ml-4">Built with 🤍 by Giuseppe Sorrentino</p>
 				<p>✉️ giuseppe [at] glsorre [dot] com</p>
@@ -49,3 +47,20 @@ const { title, description } = Astro.props;
 		</main>
 	</body>
 </html>
+
+<style>
+	.quadratino {
+        background: url('../assets/quadratino.svg') no-repeat 15px center;
+        background-size: 13.75px;
+    }
+	
+	.quadratino:hover {
+		background: url('../assets/quadratino.svg') no-repeat 15px center white;
+		background-size: 13.75px;
+	}
+
+	.dark .quadratino:hover {
+		background: url('../assets/quadratino.svg') no-repeat 15px center black;
+		background-size: 13.75px;
+	}
+</style>
