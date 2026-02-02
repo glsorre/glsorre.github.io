@@ -1,29 +1,41 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Slide from '../components/Slide.astro';
+import Layout from "../layouts/Layout.astro";
+import Slide from "../components/Slide.astro";
 
-import { getCollection } from 'astro:content';
+import { getCollection } from "astro:content";
 
-const stack = (await getCollection('stack')).sort((a, b) => 
-	a.data.order - b.data.order
+const stack = (await getCollection("stack")).sort(
+	(a, b) => a.data.order - b.data.order,
 );
 ---
 
-<Layout title="Giuseppe Sorrentino - Experience" description="I'm Giuseppe Sorrentino, a software engineer with experience in creating and delivering digital products.">
+<Layout
+	title="Giuseppe Sorrentino - Experience"
+	description="I'm Giuseppe Sorrentino, a software engineer with experience in creating and delivering digital products."
+>
 	<main class="flex flex-row w-full min-h-full">
 		<Slide prefix="Tech" title="Stack">
 			<ul class="grid max-xl:grid-cols-1 grid-cols-3 gap-6 min-xl:pl-10">
-				{stack.map((item) => (
-					<li class="bg-glsorre-40 p-4 rounded-2xl text-center flex flex-col">
-						<div class="text-4xl p-8">
-							<i class:list={{ "bi": true, [item.data.icon]: true }}"></i>
-						</div>
-						<div class="text-left flex flex-col justify-between flex-1 gap-3 min-h-30">
-							<h3 class="quicksand-600 text-2xl">{item.data.title}</h3>
-							<p>{item.data.skills}</p>
-						</div>
-					</li>
-				))}
+				{
+					stack.map((item) => (
+						<li class="bg-glsorre-40 p-4 rounded-2xl text-center flex flex-col animated">
+							<div class="text-4xl p-8">
+								<i
+									class:list={{
+										bi: true,
+										[item.data.icon]: true,
+									}}
+								/>
+							</div>
+							<div class="text-left flex flex-col justify-between flex-1 gap-3 min-h-30">
+								<h3 class="quicksand-600 text-2xl">
+									{item.data.title}
+								</h3>
+								<p>{item.data.skills}</p>
+							</div>
+						</li>
+					))
+				}
 			</ul>
 		</Slide>
 	</main>
@@ -31,18 +43,18 @@ const stack = (await getCollection('stack')).sort((a, b) =>
 
 <style>
 	.spunta {
-		background: url('src/assets/spunta.svg') no-repeat left 5px;
+		background: url("src/assets/spunta.svg") no-repeat left 5px;
 		background-size: 18px;
 	}
 	.cerchio {
-		background: url('src/assets/cerchio.svg') no-repeat left 5px;
+		background: url("src/assets/cerchio.svg") no-repeat left 5px;
 		background-size: 18px;
 	}
 	.linea {
 		position: relative;
 	}
 	.linea::before {
-		content: ' ';
+		content: " ";
 		display: block;
 		position: absolute;
 		background: #95c389;
@@ -51,5 +63,28 @@ const stack = (await getCollection('stack')).sort((a, b) =>
 		top: 0;
 		bottom: 0;
 		z-index: -1;
+	}
+
+	@keyframes slide-in {
+		from {
+			opacity: 0;
+			transform: scale(0.4);
+		}
+		to {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	.animated {
+		opacity: 0;
+		transform: scale(0.4);
+
+		/* Scroll-triggered animation */
+		animation-name: slide-in;
+		animation-duration: 800ms;
+		animation-fill-mode: both;
+		animation-timeline: view();
+		animation-range: entry 0% entry 100%;
 	}
 </style>
