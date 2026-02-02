@@ -2,40 +2,44 @@
 import NavItem from "./NavItem.astro";
 ---
 
-<nav class="bg-glsorre-40" x-data="{ open: false }">
-    <div class="max-xl:w-[90%] w-[50%] m-auto flex justify-between items-center py-10 h[55px]">
+<nav class="bg-glsorre-40">
+    <div
+        class="max-xl:w-[80%] w-[50%] m-auto flex justify-between items-center py-10 h[55px]"
+    >
         <slot name="title" />
         <ul class="flex max-xl:hidden gap-5 quicksand-600">
             <slot />
         </ul>
-        <button class="min-xl:hidden text-3xl hamburger" @click="open = true">
+        <button class="min-xl:hidden text-3xl hamburger" popovertarget="mobile-menu">
         </button>
     </div>
-    <div class="fixed top-5 bottom-5 left-5 right-5 shadow-xl rounded bg-white dark:bg-black z-1000" x-show="open" x-transition>
-        <ul class="flex flex-col gap-10 quicksand-600 p-10">
-            <div class="flex items-center justify-between">
-                <p class="kenney-600 px-6 text-xl quadratino">
-                    Giuseppe Sorrentino
-                </p>
-                <button class="text-3xl croce" @click="open = false">
+    <div id="mobile-menu" class="fixed size-auto bg-white dark:bg-black m-5 shadow-md rounded" popover>
+        <div
+            class="absolute size-auto top-5 bottom-5 left-5 right-5"
+        >
+            <div class="flex items-center justify-between pt-3 pb-6">
+                <p class="kenney-600 text-xl quadratino ml-4 pl-6">giuseppe sorrentino</p>
+                <button class="text-3xl croce" popovertarget="mobile-menu">
                 </button>
             </div>
-            <NavItem mobile href="/">About</NavItem>
-			<NavItem mobile href="/experience/">Experience</NavItem>
-			<NavItem mobile href="/stack/">Stack</NavItem>
-			<NavItem mobile href="/projects/">Projects</NavItem>
-        </ul>
+            <ul class="flex flex-col gap-1 quicksand-600">
+                <NavItem mobile href="/">About</NavItem>
+                    <NavItem mobile href="/experience/">Experience</NavItem>
+                    <NavItem mobile href="/stack/">Stack</NavItem>
+                    <NavItem mobile href="/projects/">Projects</NavItem>
+            </ul>
+        </div>
     </div>
 </nav>
 
 <style>
     .quadratino {
-        background: url('../assets/quadratino.svg') no-repeat left 6.5px;
+        background: url("../assets/quadratino.svg") no-repeat left 6.5px;
         background-size: 13.75px;
     }
 
     .hamburger {
-        mask: url('../assets/menu.svg') no-repeat center;
+        mask: url("../assets/menu.svg") no-repeat center;
         mask-size: 24px;
         width: 28px;
         height: 28px;
@@ -48,7 +52,7 @@ import NavItem from "./NavItem.astro";
     }
 
     .croce {
-        mask: url('../assets/croce.svg') no-repeat center;
+        mask: url("../assets/croce.svg") no-repeat center;
         mask-size: 24px;
         width: 28px;
         height: 28px;
@@ -58,5 +62,50 @@ import NavItem from "./NavItem.astro";
 
     html.dark .croce {
         background-color: white;
+    }
+
+    [popover]:popover-open {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+
+    [popover] {
+        opacity: 0;
+        transform: scaleX(0);
+        transition:
+            opacity 0.3s,
+            transform 0.3s,
+            overlay 0.3s allow-discrete,
+            display 0.3s allow-discrete;
+        color: black;
+    }
+
+    html.dark [popover] {
+        color: white;
+    }
+
+    @starting-style {
+        [popover]:popover-open {
+            opacity: 0;
+            transform: scaleX(0);
+        }
+    }
+
+    [popover]::backdrop {
+        background-color: transparent;
+        transition:
+            display 0.3s allow-discrete,
+            overlay 0.3s allow-discrete,
+            background-color 0.3s;
+    }
+
+    [popover]:popover-open::backdrop {
+        background-color: rgb(0 0 0 / 40%);
+    }
+
+    @starting-style {
+        [popover]:popover-open::backdrop {
+            background-color: transparent;
+        }
     }
 </style>
