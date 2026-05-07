@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Slide from '../components/Slide.astro';
+import BlogItem from '../components/BlogItem.astro';
+import { getCollection, render } from 'astro:content';
+
+const posts = (await getCollection('posts'))
+	.sort((a, b) => 
+		new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+	);
+---
+
+<Layout title="Giuseppe Sorrentino - About" description="I'm Giuseppe Sorrentino, a software engineer specialized in shortening time-to-market of digital products.">
+	<main class="flex flex-col w-full">
+		<Slide prefix="my blog" title="posts">
+			<ol class="min-xl:pl-10 flex flex-col gap-3">
+				{posts.map((post) => (
+					<BlogItem {...post.data} />
+                ))}
+            </ol>
+		</Slide>
+	</main>
+</Layout>
+
+<style>
+	.logo-right-right {
+		background: url('../assets/marchio right right.svg') no-repeat left center;
+		background-size: 17px;
+	}
+</style>

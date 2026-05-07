@@ -1,5 +1,8 @@
 ---
 import NavItem from "./NavItem.astro";
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection("posts");
 ---
 
 <nav class="bg-glsorre-40">
@@ -23,10 +26,9 @@ import NavItem from "./NavItem.astro";
                 </button>
             </div>
             <ul class="flex flex-col gap-1 quicksand-600">
-                <NavItem mobile href="/">About</NavItem>
-                    <NavItem mobile href="/experience/">Experience</NavItem>
-                    <NavItem mobile href="/stack/">Stack</NavItem>
-                    <NavItem mobile href="/projects/">Projects</NavItem>
+                <NavItem mobile href="/">Home</NavItem>
+                {posts.length > 0 && <NavItem mobile href="/blog/">Blog</NavItem>}
+                <NavItem mobile href="/experience/">Experience</NavItem>
             </ul>
         </div>
     </div>

@@ -2,7 +2,9 @@
 import '../styles/global.css';
 import NavBar from '../components/NavBar.astro';
 import NavItem from '../components/NavItem.astro';
+import { getCollection } from 'astro:content';
 
+const posts = await getCollection("posts");
 const { title, description } = Astro.props;
 ---
 
@@ -32,9 +34,8 @@ const { title, description } = Astro.props;
 					Giuseppe Sorrentino
 				</a>
 				<NavItem href="/">About</NavItem>
-				<NavItem href="/experience/">Experience</NavItem>
-				<NavItem href="/stack/">Stack</NavItem>
-				<NavItem href="/projects/">Projects</NavItem>
+                {posts.length > 0 && <NavItem href="/blog/">Blog</NavItem>}
+                <NavItem href="/experience/">Experience</NavItem>
 			</NavBar>
 			<div class="flex-1">
 				<slot />
