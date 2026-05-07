@@ -1,0 +1,25 @@
+---
+import Slide from '../../components/Slide.astro';
+import Layout from '../../layouts/Layout.astro';
+
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection("posts");
+  console.log(posts);
+  return posts.map(post => ({
+    params: { id: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+---
+
+<Layout title={`right right - ${post.data.title}`}>
+  <Slide title={post.data.title}>
+    <div class="prose min-xl:pl-10">
+      <Content />
+    </div>
+</Layout>

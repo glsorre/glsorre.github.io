@@ -1,48 +1,48 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Slide from '../components/Slide.astro';
+import BlogItem from '../components/BlogItem.astro';
 
 import { getCollection } from 'astro:content';
-const links = (await getCollection('links')).sort((a, b) => 
-	new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
-);
+
+const posts = (await getCollection('posts'))
+	.sort((a, b) => 
+		new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+	)
+
+const latestPosts = posts.slice(0, 3);
 ---
 
 <Layout title="Giuseppe Sorrentino - About" description="I'm Giuseppe Sorrentino, a software engineer specialized in shortening time-to-market of digital products.">
-	<main class="flex w-full">
-		<Slide prefix="I'm a" title="software engineer">
-			<ul class="pl-14 pb-20 list-disc flex flex-col gap-8">
+	<main class="flex flex-col w-full">
+		<Slide prefix="Hello, I am" title="Giuseppe Sorrentino">
+			<ul class="pl-14 pb-10 list-disc flex flex-col gap-8">
 				<li>
-					<div class="flex flex-col gap-6">
-						<p>Over <strong>10 years of experience</strong> in software development</p>
-						<div>
-							<a href="/experience/" class="bg-glsorre-40 hover:bg-glsorre-60 p-4 rounded trasition-background quicksand-500">Check my Experience</a>
-						</div>
-					</div>
+					<strong>Senior software engineer</strong>, 10+ years in. Currently at <strong>Fincons</strong>.
 				</li>
 				<li>
-					<div class="flex gap-6 flex-col">
-						<p>Passionate about <strong>creating delightful digital products</strong> for web, mobile, and desktop</p>
-						<div>
-							<a href="/projects/" class="bg-glsorre-40 hover:bg-glsorre-60 p-4 rounded trasition-background quicksand-500">See my Projects</a>
-						</div>
-					</div>
+					I build <strong>opinionated tools for power users</strong> across native desktop (Swift, C#) and modern web (TypeScript, Vue, React).
 				</li>
 				<li>
-					<div class="flex gap-6 flex-col">
-						<p>Full-stack, <strong>frontend oriented</strong></p>
-						<div>
-							<a href="/projects/" class="bg-glsorre-40 hover:bg-glsorre-60 p-4 rounded trasition-background quicksand-500">Discover my Stack</a>
-						</div>
-					</div>
+					Most days I'm thinking about <strong>how to ship well as a solo developer</strong> — design, distribution.
 				</li>		
 			</ul>
 			<a target="_blank" href="https://www.rightright.me">
 				<p class="px-10 bg-right-right-40 hover:bg-right-right-60 p-4 rounded transition-background inline-block">
-					In my free time I work on digital products at <span class="logo-right-right kenney-600 text-2xl pl-6 ml-2">right right</span>
+					Outside work I build tools for power users at <span class="logo-right-right kenney-600 text-2xl pl-6 ml-2">right right</span>
 				</p>
 			</a>
 		</Slide>
+		{latestPosts.length > 0 && <Slide prefix="Writing about" title="software engineering">
+			<ol class="min-xl:pl-10 flex flex-col gap-3">
+				{latestPosts.map((post, index) => (
+					<BlogItem {...post.data} />
+                ))}
+				{latestPosts.length > 3 && <a href="/blog/" class="flex min-md:w-[33%] min-md:mx-auto flex-col rounded-full border-2 border-glsorre kenney-600 p-2 gap-3 rounded hover:scale-[1.02] transition-all group text-glsorre text-center">
+					view all posts
+				</a>}
+            </ol>
+		</Slide>}
 	</main>
 </Layout>
 
