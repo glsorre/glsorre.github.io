@@ -26,7 +26,7 @@ const posts = await getCollection("posts");
                 </button>
             </div>
             <ul class="flex flex-col gap-1 quicksand-600">
-                <NavItem mobile href="/">Home</NavItem>
+                <NavItem mobile href="/">About</NavItem>
                 {posts.length > 0 && <NavItem mobile href="/blog/">Blog</NavItem>}
                 <NavItem mobile href="/experience/">Experience</NavItem>
             </ul>

@@ -17,7 +17,7 @@ const { post } = Astro.props;
 const { Content } = await render(post);
 ---
 
-<Layout title={`glsorre.com - ${post.data.title}`} description={post.data.subtitle}>
+<Layout title={`Giuseppe Sorrentino AKA glsorre - ${post.data.title}`} description={post.data.subtitle}>
   <Slide title={post.data.title}>
     <div class="prose min-xl:pl-10">
       <Content />
