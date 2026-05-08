@@ -31,7 +31,7 @@ const { title, description } = Astro.props;
 		<main class="flex flex-col min-h-screen">
 			<NavBar>
 				<a slot="title" href="/" class="block rounded quadratino py-3.5 pl-10 mr-2 h-[52px] w-[273px] kenney-600 text-xl">
-					Giuseppe Sorrentino
+					glsorre
 				</a>
 				<NavItem href="/">About</NavItem>
                 {posts.length > 0 && <NavItem href="/blog/">Blog</NavItem>}
@@ -51,17 +51,17 @@ const { title, description } = Astro.props;
 
 <style>
 	.quadratino {
-        background: url('../assets/quadratino.svg') no-repeat 15px center;
+        background: url('../assets/quadratino.svg') no-repeat 15px 20px;
         background-size: 13.75px;
     }
 	
 	.quadratino:hover {
-		background: url('../assets/quadratino.svg') no-repeat 15px center white;
+		background: url('../assets/quadratino.svg') no-repeat 15px 20px white;
 		background-size: 13.75px;
 	}
 
 	.dark .quadratino:hover {
-		background: url('../assets/quadratino.svg') no-repeat 15px center black;
+		background: url('../assets/quadratino.svg') no-repeat 15px 20px black;
 		background-size: 13.75px;
 	}
 </style>
