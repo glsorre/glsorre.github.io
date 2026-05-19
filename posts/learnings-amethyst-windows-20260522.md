@@ -1,8 +1,8 @@
 ---
 title: What I learnt shipping AmethystWindows to 400 stars — and then archiving it
 subtitle: This is what I took away from the whole thing
-anchor: /blog/learnings-amethyst-windows-20260525
-date: 5/25/2026
+anchor: /blog/learnings-amethyst-windows-20260522
+date: 5/22/2026
 ---
 
 A few years ago **I built a tiling window manager for Windows 10**, inspired by [Amethyst](https://github.com/ianyh/amethyst). I called it [AmethystWindows](https://github.com/glsorre/amethystwindows). It got **400 stars**, 30 releases, and a small but real community of people who used it daily. Then I archived it. This is what I took away from the whole thing.
