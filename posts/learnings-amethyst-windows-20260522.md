@@ -23,9 +23,9 @@ Windows 11 introduced enough changes to the windowing and DWM internals that kee
 ## A more recent reflection — on the rise of Ai...
 Ai allows developers to explore different areas from the one they are daily involved. Are you a react developer who wants to move into native development? Ai empowers you. Access to documentation, boilerplate and code generation has become free. Sure knowing the coding world still helps. **But for how long?**
 
-What really makes the difference, more than ever, **is knowing you users and understand truly their needs**. I really believe AmethystWindows' primary key of success was this. I recognized a niche (original amwthyst power users constrained to work on windows) and satisfied their needs.
+What really makes the difference, more than ever, **is knowing your users and understand truly their needs**. I really believe AmethystWindows' primary key of success was this. I recognized a niche (original amwthyst power users constrained to work on windows) and satisfied their needs.
 
 ## What carried forward
 Almost everything I now believe about building software for power users came from AmethystWindows. **Ship native**. Be **opinionated** — tools that try to please everyone end up with eighteen configuration options and no personality. **Make the default experience good enough that most users never need to touch a setting**. Respect the platform you're building on instead of fighting it.
 
-**Those instincts are in everything I build under [rightright.me now](https://www.rightright.me)**. The surface changes — different platform, different problem — but the underlying model is the same: **a small, sharp tool for a specific kind of user, maintained honestly**.
+**Those instincts are in everything I build under [rightright.me](https://www.rightright.me)** now. The surface changes — different platform, different problem — but the underlying model is the same: **a small, sharp tool for a specific kind of user, maintained honestly**.
