@@ -3,12 +3,12 @@ const { anchor, date, title, subtitle } = Astro.props;
 ---
 
 <a href={anchor} class="flex flex-col border-2 border-glsorre p-4 gap-3 rounded hover:scale-[1.02] transition-all group">
-    <div class="flex flex-row max-xl:flex-col gap-3">
-        <h3 class="quicksand-600 text-2xl flex-grow">
+    <div class="flex flex-row max-xl:flex-col gap-3 justify-between">
+        <h3 class="quicksand-600 text-2xl">
             {title}
         </h3>
-        <div class="flex gap-3">
-            <span class="quicksand-400 text-sm rounded-full bg-glsorre px-4 py-2 text-white dark:text-black">
+        <div class="flex gap-3 min-w-[17.5%]">
+            <span class="quicksand-400 text-sm rounded-full bg-glsorre px-4 py-2 text-white text-center dark:text-black h-[36px] w-full">
                 <i class="bi bi-calendar"></i>
                 {date.toLocaleDateString()}
             </span>
