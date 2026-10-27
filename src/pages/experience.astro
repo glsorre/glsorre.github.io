@@ -5,7 +5,7 @@ import Slide from '../components/Slide.astro';
 import { getCollection, render } from 'astro:content';
 
 const experiences = (await getCollection('experiences')).sort((a, b) => 
-	b.data.end_year === 'Present' ? 1 : a.data.end_year === 'Present' ? -1 : b.data.end_year - a.data.end_year
+	b.data.end_year === 'Present' ? 1 : a.data.end_year === 'Present' ? -1 : b.data.end_year - a.data.end_year || b.data.start_year - a.data.start_year
 );
 
 const experiencesBodies = await Promise.all(

@@ -19,20 +19,15 @@ const latestPosts = posts.slice(0, 3);
 		<Slide prefix="Hello, I am" title="Giuseppe">
 			<ul class="pl-14 pb-10 list-disc flex flex-col gap-8">
 				<li>
-					<strong>Senior software engineer</strong>, 10+ years in. Currently at <strong>Fincons</strong>.
+					<strong>Senior software engineer</strong>, 10+ years in. Currently at <strong>UL Solutions</strong>.
 				</li>
 				<li>
-					I build <strong>opinionated tools for power users</strong> across native desktop (Swift, C#) and modern web (TypeScript, Vue, React).
+					I work <strong>across native desktop (Swift, C#) and modern web (TypeScript, Vue, React)</strong>.
 				</li>
 				<li>
-					Most days I'm thinking about <strong>how to ship well as a solo developer</strong> — design, distribution.
+					Most days I'm thinking about <strong>how to succeed as a solo developer</strong>.
 				</li>		
 			</ul>
-			<a target="_blank" href="https://www.rightright.me">
-				<p class="px-10 bg-right-right-40 hover:bg-right-right-60 p-4 rounded transition-background inline-block">
-					Outside work I build tools for power users at <span class="logo-right-right kenney-600 text-2xl pl-6 ml-2">right right</span>
-				</p>
-			</a>
 		</Slide>
 		{latestPosts.length > 0 && <Slide prefix="Writing about" title="software engineering">
 			<ol class="min-xl:pl-10 flex flex-col gap-3">
@@ -46,10 +41,3 @@ const latestPosts = posts.slice(0, 3);
 		</Slide>}
 	</main>
 </Layout>
-
-<style>
-	.logo-right-right {
-		background: url('../assets/marchio right right.svg') no-repeat left center;
-		background-size: 17px;
-	}
-</style>

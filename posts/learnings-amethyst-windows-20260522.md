@@ -28,4 +28,4 @@ What really makes the difference, more than ever, **is knowing your users and un
 ## What carried forward
 Almost everything I now believe about building software for power users came from AmethystWindows. **Ship native**. Be **opinionated** — tools that try to please everyone end up with eighteen configuration options and no personality. **Make the default experience good enough that most users never need to touch a setting**. Respect the platform you're building on instead of fighting it.
 
-**Those instincts are in everything I build under [rightright.me](https://www.rightright.me)** now. The surface changes — different platform, different problem — but the underlying model is the same: **a small, sharp tool for a specific kind of user, maintained honestly**.
+**Those instincts are in everything I build** now. The surface changes — different platform, different problem — but the underlying model is the same: **a small, sharp tool for a specific kind of user, maintained honestly**.
